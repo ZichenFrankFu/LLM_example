@@ -1,0 +1,1100 @@
+/data/apps/linux-centos8-cascadelake/gcc-9.3.0/anaconda3-2020.07-i7qavhiohb2uwqs4eqjeefzx3kp5jqdu/etc/profile.d/conda.csh: line 1: setenv: command not found
+/data/apps/linux-centos8-cascadelake/gcc-9.3.0/anaconda3-2020.07-i7qavhiohb2uwqs4eqjeefzx3kp5jqdu/etc/profile.d/conda.csh: line 2: setenv: command not found
+/data/apps/linux-centos8-cascadelake/gcc-9.3.0/anaconda3-2020.07-i7qavhiohb2uwqs4eqjeefzx3kp5jqdu/etc/profile.d/conda.csh: line 3: setenv: command not found
+/data/apps/linux-centos8-cascadelake/gcc-9.3.0/anaconda3-2020.07-i7qavhiohb2uwqs4eqjeefzx3kp5jqdu/etc/profile.d/conda.csh: line 4: setenv: command not found
+/data/apps/linux-centos8-cascadelake/gcc-9.3.0/anaconda3-2020.07-i7qavhiohb2uwqs4eqjeefzx3kp5jqdu/etc/profile.d/conda.csh: line 34: syntax error near unexpected token `"${1}"'
+/data/apps/linux-centos8-cascadelake/gcc-9.3.0/anaconda3-2020.07-i7qavhiohb2uwqs4eqjeefzx3kp5jqdu/etc/profile.d/conda.csh: line 34: `    switch ( "${1}" )'
+Some weights of RobertaForSequenceClassification were not initialized from the model checkpoint at roberta-base and are newly initialized: ['classifier.dense.bias', 'classifier.dense.weight', 'classifier.out_proj.bias', 'classifier.out_proj.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Specified arguments: Namespace(small_subset=False, num_epochs=9, lr=0.0001, batch_size=32, device='cuda', model='roberta-base')
+Loading the dataset ...
+Slicing the data...
+Size of the loaded dataset:
+ - train: 8000
+ - dev: 3270
+ - test: 1427
+Loading the tokenizer...
+Loding the data into DS...
+ >>>>>>>> Initializing the data loaders ... 
+Loading the model ...
+modules:
+ RobertaForSequenceClassification(
+  (roberta): RobertaModel(
+    (embeddings): RobertaEmbeddings(
+      (word_embeddings): Embedding(50265, 768, padding_idx=1)
+      (position_embeddings): Embedding(514, 768, padding_idx=1)
+      (token_type_embeddings): Embedding(1, 768)
+      (LayerNorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+      (dropout): Dropout(p=0.1, inplace=False)
+    )
+    (encoder): RobertaEncoder(
+      (layer): ModuleList(
+        (0-11): 12 x RobertaLayer(
+          (attention): RobertaAttention(
+            (self): RobertaSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (output): RobertaSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (intermediate): RobertaIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+            (intermediate_act_fn): GELUActivation()
+          )
+          (output): RobertaOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+      )
+    )
+  )
+  (classifier): RobertaClassificationHead(
+    (dense): Linear(in_features=768, out_features=768, bias=True)
+    (dropout): Dropout(p=0.1, inplace=False)
+    (out_proj): Linear(in_features=768, out_features=2, bias=True)
+  )
+)
+roberta RobertaModel(
+  (embeddings): RobertaEmbeddings(
+    (word_embeddings): Embedding(50265, 768, padding_idx=1)
+    (position_embeddings): Embedding(514, 768, padding_idx=1)
+    (token_type_embeddings): Embedding(1, 768)
+    (LayerNorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+    (dropout): Dropout(p=0.1, inplace=False)
+  )
+  (encoder): RobertaEncoder(
+    (layer): ModuleList(
+      (0-11): 12 x RobertaLayer(
+        (attention): RobertaAttention(
+          (self): RobertaSelfAttention(
+            (query): Linear(in_features=768, out_features=768, bias=True)
+            (key): Linear(in_features=768, out_features=768, bias=True)
+            (value): Linear(in_features=768, out_features=768, bias=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+          (output): RobertaSelfOutput(
+            (dense): Linear(in_features=768, out_features=768, bias=True)
+            (LayerNorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+        (intermediate): RobertaIntermediate(
+          (dense): Linear(in_features=768, out_features=3072, bias=True)
+          (intermediate_act_fn): GELUActivation()
+        )
+        (output): RobertaOutput(
+          (dense): Linear(in_features=3072, out_features=768, bias=True)
+          (LayerNorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+      )
+    )
+  )
+)
+roberta.embeddings RobertaEmbeddings(
+  (word_embeddings): Embedding(50265, 768, padding_idx=1)
+  (position_embeddings): Embedding(514, 768, padding_idx=1)
+  (token_type_embeddings): Embedding(1, 768)
+  (LayerNorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+  (dropout): Dropout(p=0.1, inplace=False)
+)
+roberta.embeddings.word_embeddings Embedding(50265, 768, padding_idx=1)
+roberta.embeddings.position_embeddings Embedding(514, 768, padding_idx=1)
+roberta.embeddings.token_type_embeddings Embedding(1, 768)
+roberta.embeddings.LayerNorm LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+roberta.embeddings.dropout Dropout(p=0.1, inplace=False)
+roberta.encoder RobertaEncoder(
+  (layer): ModuleList(
+    (0-11): 12 x RobertaLayer(
+      (attention): RobertaAttention(
+        (self): RobertaSelfAttention(
+          (query): Linear(in_features=768, out_features=768, bias=True)
+          (key): Linear(in_features=768, out_features=768, bias=True)
+          (value): Linear(in_features=768, out_features=768, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+        (output): RobertaSelfOutput(
+          (dense): Linear(in_features=768, out_features=768, bias=True)
+          (LayerNorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+      )
+      (intermediate): RobertaIntermediate(
+        (dense): Linear(in_features=768, out_features=3072, bias=True)
+        (intermediate_act_fn): GELUActivation()
+      )
+      (output): RobertaOutput(
+        (dense): Linear(in_features=3072, out_features=768, bias=True)
+        (LayerNorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+    )
+  )
+)
+roberta.encoder.layer ModuleList(
+  (0-11): 12 x RobertaLayer(
+    (attention): RobertaAttention(
+      (self): RobertaSelfAttention(
+        (query): Linear(in_features=768, out_features=768, bias=True)
+        (key): Linear(in_features=768, out_features=768, bias=True)
+        (value): Linear(in_features=768, out_features=768, bias=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+      (output): RobertaSelfOutput(
+        (dense): Linear(in_features=768, out_features=768, bias=True)
+        (LayerNorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+    )
+    (intermediate): RobertaIntermediate(
+      (dense): Linear(in_features=768, out_features=3072, bias=True)
+      (intermediate_act_fn): GELUActivation()
+    )
+    (output): RobertaOutput(
+      (dense): Linear(in_features=3072, out_features=768, bias=True)
+      (LayerNorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+      (dropout): Dropout(p=0.1, inplace=False)
+    )
+  )
+)
+roberta.encoder.layer.0 RobertaLayer(
+  (attention): RobertaAttention(
+    (self): RobertaSelfAttention(
+      (query): Linear(in_features=768, out_features=768, bias=True)
+      (key): Linear(in_features=768, out_features=768, bias=True)
+      (value): Linear(in_features=768, out_features=768, bias=True)
+      (dropout): Dropout(p=0.1, inplace=False)
+    )
+    (output): RobertaSelfOutput(
+      (dense): Linear(in_features=768, out_features=768, bias=True)
+      (LayerNorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+      (dropout): Dropout(p=0.1, inplace=False)
+    )
+  )
+  (intermediate): RobertaIntermediate(
+    (dense): Linear(in_features=768, out_features=3072, bias=True)
+    (intermediate_act_fn): GELUActivation()
+  )
+  (output): RobertaOutput(
+    (dense): Linear(in_features=3072, out_features=768, bias=True)
+    (LayerNorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+    (dropout): Dropout(p=0.1, inplace=False)
+  )
+)
+roberta.encoder.layer.0.attention RobertaAttention(
+  (self): RobertaSelfAttention(
+    (query): Linear(in_features=768, out_features=768, bias=True)
+    (key): Linear(in_features=768, out_features=768, bias=True)
+    (value): Linear(in_features=768, out_features=768, bias=True)
+    (dropout): Dropout(p=0.1, inplace=False)
+  )
+  (output): RobertaSelfOutput(
+    (dense): Linear(in_features=768, out_features=768, bias=True)
+    (LayerNorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+    (dropout): Dropout(p=0.1, inplace=False)
+  )
+)
+roberta.encoder.layer.0.attention.self RobertaSelfAttention(
+  (query): Linear(in_features=768, out_features=768, bias=True)
+  (key): Linear(in_features=768, out_features=768, bias=True)
+  (value): Linear(in_features=768, out_features=768, bias=True)
+  (dropout): Dropout(p=0.1, inplace=False)
+)
+roberta.encoder.layer.0.attention.self.query Linear(in_features=768, out_features=768, bias=True)
+roberta.encoder.layer.0.attention.self.key Linear(in_features=768, out_features=768, bias=True)
+roberta.encoder.layer.0.attention.self.value Linear(in_features=768, out_features=768, bias=True)
+roberta.encoder.layer.0.attention.self.dropout Dropout(p=0.1, inplace=False)
+roberta.encoder.layer.0.attention.output RobertaSelfOutput(
+  (dense): Linear(in_features=768, out_features=768, bias=True)
+  (LayerNorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+  (dropout): Dropout(p=0.1, inplace=False)
+)
+roberta.encoder.layer.0.attention.output.dense Linear(in_features=768, out_features=768, bias=True)
+roberta.encoder.layer.0.attention.output.LayerNorm LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+roberta.encoder.layer.0.attention.output.dropout Dropout(p=0.1, inplace=False)
+roberta.encoder.layer.0.intermediate RobertaIntermediate(
+  (dense): Linear(in_features=768, out_features=3072, bias=True)
+  (intermediate_act_fn): GELUActivation()
+)
+roberta.encoder.layer.0.intermediate.dense Linear(in_features=768, out_features=3072, bias=True)
+roberta.encoder.layer.0.intermediate.intermediate_act_fn GELUActivation()
+roberta.encoder.layer.0.output RobertaOutput(
+  (dense): Linear(in_features=3072, out_features=768, bias=True)
+  (LayerNorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+  (dropout): Dropout(p=0.1, inplace=False)
+)
+roberta.encoder.layer.0.output.dense Linear(in_features=3072, out_features=768, bias=True)
+roberta.encoder.layer.0.output.LayerNorm LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+roberta.encoder.layer.0.output.dropout Dropout(p=0.1, inplace=False)
+roberta.encoder.layer.1 RobertaLayer(
+  (attention): RobertaAttention(
+    (self): RobertaSelfAttention(
+      (query): Linear(in_features=768, out_features=768, bias=True)
+      (key): Linear(in_features=768, out_features=768, bias=True)
+      (value): Linear(in_features=768, out_features=768, bias=True)
+      (dropout): Dropout(p=0.1, inplace=False)
+    )
+    (output): RobertaSelfOutput(
+      (dense): Linear(in_features=768, out_features=768, bias=True)
+      (LayerNorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+      (dropout): Dropout(p=0.1, inplace=False)
+    )
+  )
+  (intermediate): RobertaIntermediate(
+    (dense): Linear(in_features=768, out_features=3072, bias=True)
+    (intermediate_act_fn): GELUActivation()
+  )
+  (output): RobertaOutput(
+    (dense): Linear(in_features=3072, out_features=768, bias=True)
+    (LayerNorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+    (dropout): Dropout(p=0.1, inplace=False)
+  )
+)
+roberta.encoder.layer.1.attention RobertaAttention(
+  (self): RobertaSelfAttention(
+    (query): Linear(in_features=768, out_features=768, bias=True)
+    (key): Linear(in_features=768, out_features=768, bias=True)
+    (value): Linear(in_features=768, out_features=768, bias=True)
+    (dropout): Dropout(p=0.1, inplace=False)
+  )
+  (output): RobertaSelfOutput(
+    (dense): Linear(in_features=768, out_features=768, bias=True)
+    (LayerNorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+    (dropout): Dropout(p=0.1, inplace=False)
+  )
+)
+roberta.encoder.layer.1.attention.self RobertaSelfAttention(
+  (query): Linear(in_features=768, out_features=768, bias=True)
+  (key): Linear(in_features=768, out_features=768, bias=True)
+  (value): Linear(in_features=768, out_features=768, bias=True)
+  (dropout): Dropout(p=0.1, inplace=False)
+)
+roberta.encoder.layer.1.attention.self.query Linear(in_features=768, out_features=768, bias=True)
+roberta.encoder.layer.1.attention.self.key Linear(in_features=768, out_features=768, bias=True)
+roberta.encoder.layer.1.attention.self.value Linear(in_features=768, out_features=768, bias=True)
+roberta.encoder.layer.1.attention.self.dropout Dropout(p=0.1, inplace=False)
+roberta.encoder.layer.1.attention.output RobertaSelfOutput(
+  (dense): Linear(in_features=768, out_features=768, bias=True)
+  (LayerNorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+  (dropout): Dropout(p=0.1, inplace=False)
+)
+roberta.encoder.layer.1.attention.output.dense Linear(in_features=768, out_features=768, bias=True)
+roberta.encoder.layer.1.attention.output.LayerNorm LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+roberta.encoder.layer.1.attention.output.dropout Dropout(p=0.1, inplace=False)
+roberta.encoder.layer.1.intermediate RobertaIntermediate(
+  (dense): Linear(in_features=768, out_features=3072, bias=True)
+  (intermediate_act_fn): GELUActivation()
+)
+roberta.encoder.layer.1.intermediate.dense Linear(in_features=768, out_features=3072, bias=True)
+roberta.encoder.layer.1.intermediate.intermediate_act_fn GELUActivation()
+roberta.encoder.layer.1.output RobertaOutput(
+  (dense): Linear(in_features=3072, out_features=768, bias=True)
+  (LayerNorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+  (dropout): Dropout(p=0.1, inplace=False)
+)
+roberta.encoder.layer.1.output.dense Linear(in_features=3072, out_features=768, bias=True)
+roberta.encoder.layer.1.output.LayerNorm LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+roberta.encoder.layer.1.output.dropout Dropout(p=0.1, inplace=False)
+roberta.encoder.layer.2 RobertaLayer(
+  (attention): RobertaAttention(
+    (self): RobertaSelfAttention(
+      (query): Linear(in_features=768, out_features=768, bias=True)
+      (key): Linear(in_features=768, out_features=768, bias=True)
+      (value): Linear(in_features=768, out_features=768, bias=True)
+      (dropout): Dropout(p=0.1, inplace=False)
+    )
+    (output): RobertaSelfOutput(
+      (dense): Linear(in_features=768, out_features=768, bias=True)
+      (LayerNorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+      (dropout): Dropout(p=0.1, inplace=False)
+    )
+  )
+  (intermediate): RobertaIntermediate(
+    (dense): Linear(in_features=768, out_features=3072, bias=True)
+    (intermediate_act_fn): GELUActivation()
+  )
+  (output): RobertaOutput(
+    (dense): Linear(in_features=3072, out_features=768, bias=True)
+    (LayerNorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+    (dropout): Dropout(p=0.1, inplace=False)
+  )
+)
+roberta.encoder.layer.2.attention RobertaAttention(
+  (self): RobertaSelfAttention(
+    (query): Linear(in_features=768, out_features=768, bias=True)
+    (key): Linear(in_features=768, out_features=768, bias=True)
+    (value): Linear(in_features=768, out_features=768, bias=True)
+    (dropout): Dropout(p=0.1, inplace=False)
+  )
+  (output): RobertaSelfOutput(
+    (dense): Linear(in_features=768, out_features=768, bias=True)
+    (LayerNorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+    (dropout): Dropout(p=0.1, inplace=False)
+  )
+)
+roberta.encoder.layer.2.attention.self RobertaSelfAttention(
+  (query): Linear(in_features=768, out_features=768, bias=True)
+  (key): Linear(in_features=768, out_features=768, bias=True)
+  (value): Linear(in_features=768, out_features=768, bias=True)
+  (dropout): Dropout(p=0.1, inplace=False)
+)
+roberta.encoder.layer.2.attention.self.query Linear(in_features=768, out_features=768, bias=True)
+roberta.encoder.layer.2.attention.self.key Linear(in_features=768, out_features=768, bias=True)
+roberta.encoder.layer.2.attention.self.value Linear(in_features=768, out_features=768, bias=True)
+roberta.encoder.layer.2.attention.self.dropout Dropout(p=0.1, inplace=False)
+roberta.encoder.layer.2.attention.output RobertaSelfOutput(
+  (dense): Linear(in_features=768, out_features=768, bias=True)
+  (LayerNorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+  (dropout): Dropout(p=0.1, inplace=False)
+)
+roberta.encoder.layer.2.attention.output.dense Linear(in_features=768, out_features=768, bias=True)
+roberta.encoder.layer.2.attention.output.LayerNorm LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+roberta.encoder.layer.2.attention.output.dropout Dropout(p=0.1, inplace=False)
+roberta.encoder.layer.2.intermediate RobertaIntermediate(
+  (dense): Linear(in_features=768, out_features=3072, bias=True)
+  (intermediate_act_fn): GELUActivation()
+)
+roberta.encoder.layer.2.intermediate.dense Linear(in_features=768, out_features=3072, bias=True)
+roberta.encoder.layer.2.intermediate.intermediate_act_fn GELUActivation()
+roberta.encoder.layer.2.output RobertaOutput(
+  (dense): Linear(in_features=3072, out_features=768, bias=True)
+  (LayerNorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+  (dropout): Dropout(p=0.1, inplace=False)
+)
+roberta.encoder.layer.2.output.dense Linear(in_features=3072, out_features=768, bias=True)
+roberta.encoder.layer.2.output.LayerNorm LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+roberta.encoder.layer.2.output.dropout Dropout(p=0.1, inplace=False)
+roberta.encoder.layer.3 RobertaLayer(
+  (attention): RobertaAttention(
+    (self): RobertaSelfAttention(
+      (query): Linear(in_features=768, out_features=768, bias=True)
+      (key): Linear(in_features=768, out_features=768, bias=True)
+      (value): Linear(in_features=768, out_features=768, bias=True)
+      (dropout): Dropout(p=0.1, inplace=False)
+    )
+    (output): RobertaSelfOutput(
+      (dense): Linear(in_features=768, out_features=768, bias=True)
+      (LayerNorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+      (dropout): Dropout(p=0.1, inplace=False)
+    )
+  )
+  (intermediate): RobertaIntermediate(
+    (dense): Linear(in_features=768, out_features=3072, bias=True)
+    (intermediate_act_fn): GELUActivation()
+  )
+  (output): RobertaOutput(
+    (dense): Linear(in_features=3072, out_features=768, bias=True)
+    (LayerNorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+    (dropout): Dropout(p=0.1, inplace=False)
+  )
+)
+roberta.encoder.layer.3.attention RobertaAttention(
+  (self): RobertaSelfAttention(
+    (query): Linear(in_features=768, out_features=768, bias=True)
+    (key): Linear(in_features=768, out_features=768, bias=True)
+    (value): Linear(in_features=768, out_features=768, bias=True)
+    (dropout): Dropout(p=0.1, inplace=False)
+  )
+  (output): RobertaSelfOutput(
+    (dense): Linear(in_features=768, out_features=768, bias=True)
+    (LayerNorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+    (dropout): Dropout(p=0.1, inplace=False)
+  )
+)
+roberta.encoder.layer.3.attention.self RobertaSelfAttention(
+  (query): Linear(in_features=768, out_features=768, bias=True)
+  (key): Linear(in_features=768, out_features=768, bias=True)
+  (value): Linear(in_features=768, out_features=768, bias=True)
+  (dropout): Dropout(p=0.1, inplace=False)
+)
+roberta.encoder.layer.3.attention.self.query Linear(in_features=768, out_features=768, bias=True)
+roberta.encoder.layer.3.attention.self.key Linear(in_features=768, out_features=768, bias=True)
+roberta.encoder.layer.3.attention.self.value Linear(in_features=768, out_features=768, bias=True)
+roberta.encoder.layer.3.attention.self.dropout Dropout(p=0.1, inplace=False)
+roberta.encoder.layer.3.attention.output RobertaSelfOutput(
+  (dense): Linear(in_features=768, out_features=768, bias=True)
+  (LayerNorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+  (dropout): Dropout(p=0.1, inplace=False)
+)
+roberta.encoder.layer.3.attention.output.dense Linear(in_features=768, out_features=768, bias=True)
+roberta.encoder.layer.3.attention.output.LayerNorm LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+roberta.encoder.layer.3.attention.output.dropout Dropout(p=0.1, inplace=False)
+roberta.encoder.layer.3.intermediate RobertaIntermediate(
+  (dense): Linear(in_features=768, out_features=3072, bias=True)
+  (intermediate_act_fn): GELUActivation()
+)
+roberta.encoder.layer.3.intermediate.dense Linear(in_features=768, out_features=3072, bias=True)
+roberta.encoder.layer.3.intermediate.intermediate_act_fn GELUActivation()
+roberta.encoder.layer.3.output RobertaOutput(
+  (dense): Linear(in_features=3072, out_features=768, bias=True)
+  (LayerNorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+  (dropout): Dropout(p=0.1, inplace=False)
+)
+roberta.encoder.layer.3.output.dense Linear(in_features=3072, out_features=768, bias=True)
+roberta.encoder.layer.3.output.LayerNorm LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+roberta.encoder.layer.3.output.dropout Dropout(p=0.1, inplace=False)
+roberta.encoder.layer.4 RobertaLayer(
+  (attention): RobertaAttention(
+    (self): RobertaSelfAttention(
+      (query): Linear(in_features=768, out_features=768, bias=True)
+      (key): Linear(in_features=768, out_features=768, bias=True)
+      (value): Linear(in_features=768, out_features=768, bias=True)
+      (dropout): Dropout(p=0.1, inplace=False)
+    )
+    (output): RobertaSelfOutput(
+      (dense): Linear(in_features=768, out_features=768, bias=True)
+      (LayerNorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+      (dropout): Dropout(p=0.1, inplace=False)
+    )
+  )
+  (intermediate): RobertaIntermediate(
+    (dense): Linear(in_features=768, out_features=3072, bias=True)
+    (intermediate_act_fn): GELUActivation()
+  )
+  (output): RobertaOutput(
+    (dense): Linear(in_features=3072, out_features=768, bias=True)
+    (LayerNorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+    (dropout): Dropout(p=0.1, inplace=False)
+  )
+)
+roberta.encoder.layer.4.attention RobertaAttention(
+  (self): RobertaSelfAttention(
+    (query): Linear(in_features=768, out_features=768, bias=True)
+    (key): Linear(in_features=768, out_features=768, bias=True)
+    (value): Linear(in_features=768, out_features=768, bias=True)
+    (dropout): Dropout(p=0.1, inplace=False)
+  )
+  (output): RobertaSelfOutput(
+    (dense): Linear(in_features=768, out_features=768, bias=True)
+    (LayerNorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+    (dropout): Dropout(p=0.1, inplace=False)
+  )
+)
+roberta.encoder.layer.4.attention.self RobertaSelfAttention(
+  (query): Linear(in_features=768, out_features=768, bias=True)
+  (key): Linear(in_features=768, out_features=768, bias=True)
+  (value): Linear(in_features=768, out_features=768, bias=True)
+  (dropout): Dropout(p=0.1, inplace=False)
+)
+roberta.encoder.layer.4.attention.self.query Linear(in_features=768, out_features=768, bias=True)
+roberta.encoder.layer.4.attention.self.key Linear(in_features=768, out_features=768, bias=True)
+roberta.encoder.layer.4.attention.self.value Linear(in_features=768, out_features=768, bias=True)
+roberta.encoder.layer.4.attention.self.dropout Dropout(p=0.1, inplace=False)
+roberta.encoder.layer.4.attention.output RobertaSelfOutput(
+  (dense): Linear(in_features=768, out_features=768, bias=True)
+  (LayerNorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+  (dropout): Dropout(p=0.1, inplace=False)
+)
+roberta.encoder.layer.4.attention.output.dense Linear(in_features=768, out_features=768, bias=True)
+roberta.encoder.layer.4.attention.output.LayerNorm LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+roberta.encoder.layer.4.attention.output.dropout Dropout(p=0.1, inplace=False)
+roberta.encoder.layer.4.intermediate RobertaIntermediate(
+  (dense): Linear(in_features=768, out_features=3072, bias=True)
+  (intermediate_act_fn): GELUActivation()
+)
+roberta.encoder.layer.4.intermediate.dense Linear(in_features=768, out_features=3072, bias=True)
+roberta.encoder.layer.4.intermediate.intermediate_act_fn GELUActivation()
+roberta.encoder.layer.4.output RobertaOutput(
+  (dense): Linear(in_features=3072, out_features=768, bias=True)
+  (LayerNorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+  (dropout): Dropout(p=0.1, inplace=False)
+)
+roberta.encoder.layer.4.output.dense Linear(in_features=3072, out_features=768, bias=True)
+roberta.encoder.layer.4.output.LayerNorm LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+roberta.encoder.layer.4.output.dropout Dropout(p=0.1, inplace=False)
+roberta.encoder.layer.5 RobertaLayer(
+  (attention): RobertaAttention(
+    (self): RobertaSelfAttention(
+      (query): Linear(in_features=768, out_features=768, bias=True)
+      (key): Linear(in_features=768, out_features=768, bias=True)
+      (value): Linear(in_features=768, out_features=768, bias=True)
+      (dropout): Dropout(p=0.1, inplace=False)
+    )
+    (output): RobertaSelfOutput(
+      (dense): Linear(in_features=768, out_features=768, bias=True)
+      (LayerNorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+      (dropout): Dropout(p=0.1, inplace=False)
+    )
+  )
+  (intermediate): RobertaIntermediate(
+    (dense): Linear(in_features=768, out_features=3072, bias=True)
+    (intermediate_act_fn): GELUActivation()
+  )
+  (output): RobertaOutput(
+    (dense): Linear(in_features=3072, out_features=768, bias=True)
+    (LayerNorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+    (dropout): Dropout(p=0.1, inplace=False)
+  )
+)
+roberta.encoder.layer.5.attention RobertaAttention(
+  (self): RobertaSelfAttention(
+    (query): Linear(in_features=768, out_features=768, bias=True)
+    (key): Linear(in_features=768, out_features=768, bias=True)
+    (value): Linear(in_features=768, out_features=768, bias=True)
+    (dropout): Dropout(p=0.1, inplace=False)
+  )
+  (output): RobertaSelfOutput(
+    (dense): Linear(in_features=768, out_features=768, bias=True)
+    (LayerNorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+    (dropout): Dropout(p=0.1, inplace=False)
+  )
+)
+roberta.encoder.layer.5.attention.self RobertaSelfAttention(
+  (query): Linear(in_features=768, out_features=768, bias=True)
+  (key): Linear(in_features=768, out_features=768, bias=True)
+  (value): Linear(in_features=768, out_features=768, bias=True)
+  (dropout): Dropout(p=0.1, inplace=False)
+)
+roberta.encoder.layer.5.attention.self.query Linear(in_features=768, out_features=768, bias=True)
+roberta.encoder.layer.5.attention.self.key Linear(in_features=768, out_features=768, bias=True)
+roberta.encoder.layer.5.attention.self.value Linear(in_features=768, out_features=768, bias=True)
+roberta.encoder.layer.5.attention.self.dropout Dropout(p=0.1, inplace=False)
+roberta.encoder.layer.5.attention.output RobertaSelfOutput(
+  (dense): Linear(in_features=768, out_features=768, bias=True)
+  (LayerNorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+  (dropout): Dropout(p=0.1, inplace=False)
+)
+roberta.encoder.layer.5.attention.output.dense Linear(in_features=768, out_features=768, bias=True)
+roberta.encoder.layer.5.attention.output.LayerNorm LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+roberta.encoder.layer.5.attention.output.dropout Dropout(p=0.1, inplace=False)
+roberta.encoder.layer.5.intermediate RobertaIntermediate(
+  (dense): Linear(in_features=768, out_features=3072, bias=True)
+  (intermediate_act_fn): GELUActivation()
+)
+roberta.encoder.layer.5.intermediate.dense Linear(in_features=768, out_features=3072, bias=True)
+roberta.encoder.layer.5.intermediate.intermediate_act_fn GELUActivation()
+roberta.encoder.layer.5.output RobertaOutput(
+  (dense): Linear(in_features=3072, out_features=768, bias=True)
+  (LayerNorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+  (dropout): Dropout(p=0.1, inplace=False)
+)
+roberta.encoder.layer.5.output.dense Linear(in_features=3072, out_features=768, bias=True)
+roberta.encoder.layer.5.output.LayerNorm LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+roberta.encoder.layer.5.output.dropout Dropout(p=0.1, inplace=False)
+roberta.encoder.layer.6 RobertaLayer(
+  (attention): RobertaAttention(
+    (self): RobertaSelfAttention(
+      (query): Linear(in_features=768, out_features=768, bias=True)
+      (key): Linear(in_features=768, out_features=768, bias=True)
+      (value): Linear(in_features=768, out_features=768, bias=True)
+      (dropout): Dropout(p=0.1, inplace=False)
+    )
+    (output): RobertaSelfOutput(
+      (dense): Linear(in_features=768, out_features=768, bias=True)
+      (LayerNorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+      (dropout): Dropout(p=0.1, inplace=False)
+    )
+  )
+  (intermediate): RobertaIntermediate(
+    (dense): Linear(in_features=768, out_features=3072, bias=True)
+    (intermediate_act_fn): GELUActivation()
+  )
+  (output): RobertaOutput(
+    (dense): Linear(in_features=3072, out_features=768, bias=True)
+    (LayerNorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+    (dropout): Dropout(p=0.1, inplace=False)
+  )
+)
+roberta.encoder.layer.6.attention RobertaAttention(
+  (self): RobertaSelfAttention(
+    (query): Linear(in_features=768, out_features=768, bias=True)
+    (key): Linear(in_features=768, out_features=768, bias=True)
+    (value): Linear(in_features=768, out_features=768, bias=True)
+    (dropout): Dropout(p=0.1, inplace=False)
+  )
+  (output): RobertaSelfOutput(
+    (dense): Linear(in_features=768, out_features=768, bias=True)
+    (LayerNorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+    (dropout): Dropout(p=0.1, inplace=False)
+  )
+)
+roberta.encoder.layer.6.attention.self RobertaSelfAttention(
+  (query): Linear(in_features=768, out_features=768, bias=True)
+  (key): Linear(in_features=768, out_features=768, bias=True)
+  (value): Linear(in_features=768, out_features=768, bias=True)
+  (dropout): Dropout(p=0.1, inplace=False)
+)
+roberta.encoder.layer.6.attention.self.query Linear(in_features=768, out_features=768, bias=True)
+roberta.encoder.layer.6.attention.self.key Linear(in_features=768, out_features=768, bias=True)
+roberta.encoder.layer.6.attention.self.value Linear(in_features=768, out_features=768, bias=True)
+roberta.encoder.layer.6.attention.self.dropout Dropout(p=0.1, inplace=False)
+roberta.encoder.layer.6.attention.output RobertaSelfOutput(
+  (dense): Linear(in_features=768, out_features=768, bias=True)
+  (LayerNorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+  (dropout): Dropout(p=0.1, inplace=False)
+)
+roberta.encoder.layer.6.attention.output.dense Linear(in_features=768, out_features=768, bias=True)
+roberta.encoder.layer.6.attention.output.LayerNorm LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+roberta.encoder.layer.6.attention.output.dropout Dropout(p=0.1, inplace=False)
+roberta.encoder.layer.6.intermediate RobertaIntermediate(
+  (dense): Linear(in_features=768, out_features=3072, bias=True)
+  (intermediate_act_fn): GELUActivation()
+)
+roberta.encoder.layer.6.intermediate.dense Linear(in_features=768, out_features=3072, bias=True)
+roberta.encoder.layer.6.intermediate.intermediate_act_fn GELUActivation()
+roberta.encoder.layer.6.output RobertaOutput(
+  (dense): Linear(in_features=3072, out_features=768, bias=True)
+  (LayerNorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+  (dropout): Dropout(p=0.1, inplace=False)
+)
+roberta.encoder.layer.6.output.dense Linear(in_features=3072, out_features=768, bias=True)
+roberta.encoder.layer.6.output.LayerNorm LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+roberta.encoder.layer.6.output.dropout Dropout(p=0.1, inplace=False)
+roberta.encoder.layer.7 RobertaLayer(
+  (attention): RobertaAttention(
+    (self): RobertaSelfAttention(
+      (query): Linear(in_features=768, out_features=768, bias=True)
+      (key): Linear(in_features=768, out_features=768, bias=True)
+      (value): Linear(in_features=768, out_features=768, bias=True)
+      (dropout): Dropout(p=0.1, inplace=False)
+    )
+    (output): RobertaSelfOutput(
+      (dense): Linear(in_features=768, out_features=768, bias=True)
+      (LayerNorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+      (dropout): Dropout(p=0.1, inplace=False)
+    )
+  )
+  (intermediate): RobertaIntermediate(
+    (dense): Linear(in_features=768, out_features=3072, bias=True)
+    (intermediate_act_fn): GELUActivation()
+  )
+  (output): RobertaOutput(
+    (dense): Linear(in_features=3072, out_features=768, bias=True)
+    (LayerNorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+    (dropout): Dropout(p=0.1, inplace=False)
+  )
+)
+roberta.encoder.layer.7.attention RobertaAttention(
+  (self): RobertaSelfAttention(
+    (query): Linear(in_features=768, out_features=768, bias=True)
+    (key): Linear(in_features=768, out_features=768, bias=True)
+    (value): Linear(in_features=768, out_features=768, bias=True)
+    (dropout): Dropout(p=0.1, inplace=False)
+  )
+  (output): RobertaSelfOutput(
+    (dense): Linear(in_features=768, out_features=768, bias=True)
+    (LayerNorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+    (dropout): Dropout(p=0.1, inplace=False)
+  )
+)
+roberta.encoder.layer.7.attention.self RobertaSelfAttention(
+  (query): Linear(in_features=768, out_features=768, bias=True)
+  (key): Linear(in_features=768, out_features=768, bias=True)
+  (value): Linear(in_features=768, out_features=768, bias=True)
+  (dropout): Dropout(p=0.1, inplace=False)
+)
+roberta.encoder.layer.7.attention.self.query Linear(in_features=768, out_features=768, bias=True)
+roberta.encoder.layer.7.attention.self.key Linear(in_features=768, out_features=768, bias=True)
+roberta.encoder.layer.7.attention.self.value Linear(in_features=768, out_features=768, bias=True)
+roberta.encoder.layer.7.attention.self.dropout Dropout(p=0.1, inplace=False)
+roberta.encoder.layer.7.attention.output RobertaSelfOutput(
+  (dense): Linear(in_features=768, out_features=768, bias=True)
+  (LayerNorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+  (dropout): Dropout(p=0.1, inplace=False)
+)
+roberta.encoder.layer.7.attention.output.dense Linear(in_features=768, out_features=768, bias=True)
+roberta.encoder.layer.7.attention.output.LayerNorm LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+roberta.encoder.layer.7.attention.output.dropout Dropout(p=0.1, inplace=False)
+roberta.encoder.layer.7.intermediate RobertaIntermediate(
+  (dense): Linear(in_features=768, out_features=3072, bias=True)
+  (intermediate_act_fn): GELUActivation()
+)
+roberta.encoder.layer.7.intermediate.dense Linear(in_features=768, out_features=3072, bias=True)
+roberta.encoder.layer.7.intermediate.intermediate_act_fn GELUActivation()
+roberta.encoder.layer.7.output RobertaOutput(
+  (dense): Linear(in_features=3072, out_features=768, bias=True)
+  (LayerNorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+  (dropout): Dropout(p=0.1, inplace=False)
+)
+roberta.encoder.layer.7.output.dense Linear(in_features=3072, out_features=768, bias=True)
+roberta.encoder.layer.7.output.LayerNorm LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+roberta.encoder.layer.7.output.dropout Dropout(p=0.1, inplace=False)
+roberta.encoder.layer.8 RobertaLayer(
+  (attention): RobertaAttention(
+    (self): RobertaSelfAttention(
+      (query): Linear(in_features=768, out_features=768, bias=True)
+      (key): Linear(in_features=768, out_features=768, bias=True)
+      (value): Linear(in_features=768, out_features=768, bias=True)
+      (dropout): Dropout(p=0.1, inplace=False)
+    )
+    (output): RobertaSelfOutput(
+      (dense): Linear(in_features=768, out_features=768, bias=True)
+      (LayerNorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+      (dropout): Dropout(p=0.1, inplace=False)
+    )
+  )
+  (intermediate): RobertaIntermediate(
+    (dense): Linear(in_features=768, out_features=3072, bias=True)
+    (intermediate_act_fn): GELUActivation()
+  )
+  (output): RobertaOutput(
+    (dense): Linear(in_features=3072, out_features=768, bias=True)
+    (LayerNorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+    (dropout): Dropout(p=0.1, inplace=False)
+  )
+)
+roberta.encoder.layer.8.attention RobertaAttention(
+  (self): RobertaSelfAttention(
+    (query): Linear(in_features=768, out_features=768, bias=True)
+    (key): Linear(in_features=768, out_features=768, bias=True)
+    (value): Linear(in_features=768, out_features=768, bias=True)
+    (dropout): Dropout(p=0.1, inplace=False)
+  )
+  (output): RobertaSelfOutput(
+    (dense): Linear(in_features=768, out_features=768, bias=True)
+    (LayerNorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+    (dropout): Dropout(p=0.1, inplace=False)
+  )
+)
+roberta.encoder.layer.8.attention.self RobertaSelfAttention(
+  (query): Linear(in_features=768, out_features=768, bias=True)
+  (key): Linear(in_features=768, out_features=768, bias=True)
+  (value): Linear(in_features=768, out_features=768, bias=True)
+  (dropout): Dropout(p=0.1, inplace=False)
+)
+roberta.encoder.layer.8.attention.self.query Linear(in_features=768, out_features=768, bias=True)
+roberta.encoder.layer.8.attention.self.key Linear(in_features=768, out_features=768, bias=True)
+roberta.encoder.layer.8.attention.self.value Linear(in_features=768, out_features=768, bias=True)
+roberta.encoder.layer.8.attention.self.dropout Dropout(p=0.1, inplace=False)
+roberta.encoder.layer.8.attention.output RobertaSelfOutput(
+  (dense): Linear(in_features=768, out_features=768, bias=True)
+  (LayerNorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+  (dropout): Dropout(p=0.1, inplace=False)
+)
+roberta.encoder.layer.8.attention.output.dense Linear(in_features=768, out_features=768, bias=True)
+roberta.encoder.layer.8.attention.output.LayerNorm LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+roberta.encoder.layer.8.attention.output.dropout Dropout(p=0.1, inplace=False)
+roberta.encoder.layer.8.intermediate RobertaIntermediate(
+  (dense): Linear(in_features=768, out_features=3072, bias=True)
+  (intermediate_act_fn): GELUActivation()
+)
+roberta.encoder.layer.8.intermediate.dense Linear(in_features=768, out_features=3072, bias=True)
+roberta.encoder.layer.8.intermediate.intermediate_act_fn GELUActivation()
+roberta.encoder.layer.8.output RobertaOutput(
+  (dense): Linear(in_features=3072, out_features=768, bias=True)
+  (LayerNorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+  (dropout): Dropout(p=0.1, inplace=False)
+)
+roberta.encoder.layer.8.output.dense Linear(in_features=3072, out_features=768, bias=True)
+roberta.encoder.layer.8.output.LayerNorm LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+roberta.encoder.layer.8.output.dropout Dropout(p=0.1, inplace=False)
+roberta.encoder.layer.9 RobertaLayer(
+  (attention): RobertaAttention(
+    (self): RobertaSelfAttention(
+      (query): Linear(in_features=768, out_features=768, bias=True)
+      (key): Linear(in_features=768, out_features=768, bias=True)
+      (value): Linear(in_features=768, out_features=768, bias=True)
+      (dropout): Dropout(p=0.1, inplace=False)
+    )
+    (output): RobertaSelfOutput(
+      (dense): Linear(in_features=768, out_features=768, bias=True)
+      (LayerNorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+      (dropout): Dropout(p=0.1, inplace=False)
+    )
+  )
+  (intermediate): RobertaIntermediate(
+    (dense): Linear(in_features=768, out_features=3072, bias=True)
+    (intermediate_act_fn): GELUActivation()
+  )
+  (output): RobertaOutput(
+    (dense): Linear(in_features=3072, out_features=768, bias=True)
+    (LayerNorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+    (dropout): Dropout(p=0.1, inplace=False)
+  )
+)
+roberta.encoder.layer.9.attention RobertaAttention(
+  (self): RobertaSelfAttention(
+    (query): Linear(in_features=768, out_features=768, bias=True)
+    (key): Linear(in_features=768, out_features=768, bias=True)
+    (value): Linear(in_features=768, out_features=768, bias=True)
+    (dropout): Dropout(p=0.1, inplace=False)
+  )
+  (output): RobertaSelfOutput(
+    (dense): Linear(in_features=768, out_features=768, bias=True)
+    (LayerNorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+    (dropout): Dropout(p=0.1, inplace=False)
+  )
+)
+roberta.encoder.layer.9.attention.self RobertaSelfAttention(
+  (query): Linear(in_features=768, out_features=768, bias=True)
+  (key): Linear(in_features=768, out_features=768, bias=True)
+  (value): Linear(in_features=768, out_features=768, bias=True)
+  (dropout): Dropout(p=0.1, inplace=False)
+)
+roberta.encoder.layer.9.attention.self.query Linear(in_features=768, out_features=768, bias=True)
+roberta.encoder.layer.9.attention.self.key Linear(in_features=768, out_features=768, bias=True)
+roberta.encoder.layer.9.attention.self.value Linear(in_features=768, out_features=768, bias=True)
+roberta.encoder.layer.9.attention.self.dropout Dropout(p=0.1, inplace=False)
+roberta.encoder.layer.9.attention.output RobertaSelfOutput(
+  (dense): Linear(in_features=768, out_features=768, bias=True)
+  (LayerNorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+  (dropout): Dropout(p=0.1, inplace=False)
+)
+roberta.encoder.layer.9.attention.output.dense Linear(in_features=768, out_features=768, bias=True)
+roberta.encoder.layer.9.attention.output.LayerNorm LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+roberta.encoder.layer.9.attention.output.dropout Dropout(p=0.1, inplace=False)
+roberta.encoder.layer.9.intermediate RobertaIntermediate(
+  (dense): Linear(in_features=768, out_features=3072, bias=True)
+  (intermediate_act_fn): GELUActivation()
+)
+roberta.encoder.layer.9.intermediate.dense Linear(in_features=768, out_features=3072, bias=True)
+roberta.encoder.layer.9.intermediate.intermediate_act_fn GELUActivation()
+roberta.encoder.layer.9.output RobertaOutput(
+  (dense): Linear(in_features=3072, out_features=768, bias=True)
+  (LayerNorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+  (dropout): Dropout(p=0.1, inplace=False)
+)
+roberta.encoder.layer.9.output.dense Linear(in_features=3072, out_features=768, bias=True)
+roberta.encoder.layer.9.output.LayerNorm LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+roberta.encoder.layer.9.output.dropout Dropout(p=0.1, inplace=False)
+roberta.encoder.layer.10 RobertaLayer(
+  (attention): RobertaAttention(
+    (self): RobertaSelfAttention(
+      (query): Linear(in_features=768, out_features=768, bias=True)
+      (key): Linear(in_features=768, out_features=768, bias=True)
+      (value): Linear(in_features=768, out_features=768, bias=True)
+      (dropout): Dropout(p=0.1, inplace=False)
+    )
+    (output): RobertaSelfOutput(
+      (dense): Linear(in_features=768, out_features=768, bias=True)
+      (LayerNorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+      (dropout): Dropout(p=0.1, inplace=False)
+    )
+  )
+  (intermediate): RobertaIntermediate(
+    (dense): Linear(in_features=768, out_features=3072, bias=True)
+    (intermediate_act_fn): GELUActivation()
+  )
+  (output): RobertaOutput(
+    (dense): Linear(in_features=3072, out_features=768, bias=True)
+    (LayerNorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+    (dropout): Dropout(p=0.1, inplace=False)
+  )
+)
+roberta.encoder.layer.10.attention RobertaAttention(
+  (self): RobertaSelfAttention(
+    (query): Linear(in_features=768, out_features=768, bias=True)
+    (key): Linear(in_features=768, out_features=768, bias=True)
+    (value): Linear(in_features=768, out_features=768, bias=True)
+    (dropout): Dropout(p=0.1, inplace=False)
+  )
+  (output): RobertaSelfOutput(
+    (dense): Linear(in_features=768, out_features=768, bias=True)
+    (LayerNorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+    (dropout): Dropout(p=0.1, inplace=False)
+  )
+)
+roberta.encoder.layer.10.attention.self RobertaSelfAttention(
+  (query): Linear(in_features=768, out_features=768, bias=True)
+  (key): Linear(in_features=768, out_features=768, bias=True)
+  (value): Linear(in_features=768, out_features=768, bias=True)
+  (dropout): Dropout(p=0.1, inplace=False)
+)
+roberta.encoder.layer.10.attention.self.query Linear(in_features=768, out_features=768, bias=True)
+roberta.encoder.layer.10.attention.self.key Linear(in_features=768, out_features=768, bias=True)
+roberta.encoder.layer.10.attention.self.value Linear(in_features=768, out_features=768, bias=True)
+roberta.encoder.layer.10.attention.self.dropout Dropout(p=0.1, inplace=False)
+roberta.encoder.layer.10.attention.output RobertaSelfOutput(
+  (dense): Linear(in_features=768, out_features=768, bias=True)
+  (LayerNorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+  (dropout): Dropout(p=0.1, inplace=False)
+)
+roberta.encoder.layer.10.attention.output.dense Linear(in_features=768, out_features=768, bias=True)
+roberta.encoder.layer.10.attention.output.LayerNorm LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+roberta.encoder.layer.10.attention.output.dropout Dropout(p=0.1, inplace=False)
+roberta.encoder.layer.10.intermediate RobertaIntermediate(
+  (dense): Linear(in_features=768, out_features=3072, bias=True)
+  (intermediate_act_fn): GELUActivation()
+)
+roberta.encoder.layer.10.intermediate.dense Linear(in_features=768, out_features=3072, bias=True)
+roberta.encoder.layer.10.intermediate.intermediate_act_fn GELUActivation()
+roberta.encoder.layer.10.output RobertaOutput(
+  (dense): Linear(in_features=3072, out_features=768, bias=True)
+  (LayerNorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+  (dropout): Dropout(p=0.1, inplace=False)
+)
+roberta.encoder.layer.10.output.dense Linear(in_features=3072, out_features=768, bias=True)
+roberta.encoder.layer.10.output.LayerNorm LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+roberta.encoder.layer.10.output.dropout Dropout(p=0.1, inplace=False)
+roberta.encoder.layer.11 RobertaLayer(
+  (attention): RobertaAttention(
+    (self): RobertaSelfAttention(
+      (query): Linear(in_features=768, out_features=768, bias=True)
+      (key): Linear(in_features=768, out_features=768, bias=True)
+      (value): Linear(in_features=768, out_features=768, bias=True)
+      (dropout): Dropout(p=0.1, inplace=False)
+    )
+    (output): RobertaSelfOutput(
+      (dense): Linear(in_features=768, out_features=768, bias=True)
+      (LayerNorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+      (dropout): Dropout(p=0.1, inplace=False)
+    )
+  )
+  (intermediate): RobertaIntermediate(
+    (dense): Linear(in_features=768, out_features=3072, bias=True)
+    (intermediate_act_fn): GELUActivation()
+  )
+  (output): RobertaOutput(
+    (dense): Linear(in_features=3072, out_features=768, bias=True)
+    (LayerNorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+    (dropout): Dropout(p=0.1, inplace=False)
+  )
+)
+roberta.encoder.layer.11.attention RobertaAttention(
+  (self): RobertaSelfAttention(
+    (query): Linear(in_features=768, out_features=768, bias=True)
+    (key): Linear(in_features=768, out_features=768, bias=True)
+    (value): Linear(in_features=768, out_features=768, bias=True)
+    (dropout): Dropout(p=0.1, inplace=False)
+  )
+  (output): RobertaSelfOutput(
+    (dense): Linear(in_features=768, out_features=768, bias=True)
+    (LayerNorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+    (dropout): Dropout(p=0.1, inplace=False)
+  )
+)
+roberta.encoder.layer.11.attention.self RobertaSelfAttention(
+  (query): Linear(in_features=768, out_features=768, bias=True)
+  (key): Linear(in_features=768, out_features=768, bias=True)
+  (value): Linear(in_features=768, out_features=768, bias=True)
+  (dropout): Dropout(p=0.1, inplace=False)
+)
+roberta.encoder.layer.11.attention.self.query Linear(in_features=768, out_features=768, bias=True)
+roberta.encoder.layer.11.attention.self.key Linear(in_features=768, out_features=768, bias=True)
+roberta.encoder.layer.11.attention.self.value Linear(in_features=768, out_features=768, bias=True)
+roberta.encoder.layer.11.attention.self.dropout Dropout(p=0.1, inplace=False)
+roberta.encoder.layer.11.attention.output RobertaSelfOutput(
+  (dense): Linear(in_features=768, out_features=768, bias=True)
+  (LayerNorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+  (dropout): Dropout(p=0.1, inplace=False)
+)
+roberta.encoder.layer.11.attention.output.dense Linear(in_features=768, out_features=768, bias=True)
+roberta.encoder.layer.11.attention.output.LayerNorm LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+roberta.encoder.layer.11.attention.output.dropout Dropout(p=0.1, inplace=False)
+roberta.encoder.layer.11.intermediate RobertaIntermediate(
+  (dense): Linear(in_features=768, out_features=3072, bias=True)
+  (intermediate_act_fn): GELUActivation()
+)
+roberta.encoder.layer.11.intermediate.dense Linear(in_features=768, out_features=3072, bias=True)
+roberta.encoder.layer.11.intermediate.intermediate_act_fn GELUActivation()
+roberta.encoder.layer.11.output RobertaOutput(
+  (dense): Linear(in_features=3072, out_features=768, bias=True)
+  (LayerNorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+  (dropout): Dropout(p=0.1, inplace=False)
+)
+roberta.encoder.layer.11.output.dense Linear(in_features=3072, out_features=768, bias=True)
+roberta.encoder.layer.11.output.LayerNorm LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+roberta.encoder.layer.11.output.dropout Dropout(p=0.1, inplace=False)
+classifier RobertaClassificationHead(
+  (dense): Linear(in_features=768, out_features=768, bias=True)
+  (dropout): Dropout(p=0.1, inplace=False)
+  (out_proj): Linear(in_features=768, out_features=2, bias=True)
+)
+classifier.dense Linear(in_features=768, out_features=768, bias=True)
+classifier.dropout Dropout(p=0.1, inplace=False)
+classifier.out_proj Linear(in_features=768, out_features=2, bias=True)
+Moving model to device ...cuda
+ >>>>>>>>  Starting training ... 
+ >>>>>>>>  Initializing optimizer
+Epoch 1 training:
+0it [00:00, ?it/s]1it [00:02,  2.26s/it]2it [00:03,  1.37s/it]3it [00:03,  1.09s/it]4it [00:04,  1.05it/s]5it [00:05,  1.14it/s]6it [00:05,  1.20it/s]7it [00:06,  1.25it/s]8it [00:07,  1.28it/s]9it [00:08,  1.30it/s]10it [00:08,  1.31it/s]11it [00:09,  1.32it/s]12it [00:10,  1.33it/s]13it [00:11,  1.33it/s]14it [00:11,  1.34it/s]15it [00:12,  1.34it/s]16it [00:13,  1.34it/s]17it [00:14,  1.34it/s]18it [00:14,  1.34it/s]19it [00:15,  1.34it/s]20it [00:16,  1.34it/s]21it [00:17,  1.34it/s]22it [00:17,  1.35it/s]23it [00:18,  1.35it/s]24it [00:19,  1.35it/s]25it [00:20,  1.35it/s]26it [00:20,  1.35it/s]27it [00:21,  1.35it/s]28it [00:22,  1.35it/s]29it [00:23,  1.35it/s]30it [00:23,  1.35it/s]31it [00:24,  1.35it/s]32it [00:25,  1.35it/s]33it [00:26,  1.35it/s]34it [00:26,  1.35it/s]35it [00:27,  1.35it/s]36it [00:28,  1.35it/s]37it [00:29,  1.35it/s]38it [00:29,  1.35it/s]39it [00:30,  1.35it/s]40it [00:31,  1.35it/s]41it [00:32,  1.34it/s]42it [00:32,  1.34it/s]43it [00:33,  1.34it/s]44it [00:34,  1.34it/s]45it [00:34,  1.35it/s]46it [00:35,  1.35it/s]47it [00:36,  1.35it/s]48it [00:37,  1.35it/s]49it [00:37,  1.35it/s]50it [00:38,  1.35it/s]51it [00:39,  1.35it/s]52it [00:40,  1.35it/s]53it [00:40,  1.35it/s]54it [00:41,  1.34it/s]55it [00:42,  1.35it/s]56it [00:43,  1.35it/s]57it [00:43,  1.35it/s]58it [00:44,  1.34it/s]59it [00:45,  1.35it/s]60it [00:46,  1.35it/s]61it [00:46,  1.34it/s]62it [00:47,  1.34it/s]63it [00:48,  1.34it/s]64it [00:49,  1.34it/s]65it [00:49,  1.34it/s]66it [00:50,  1.35it/s]67it [00:51,  1.35it/s]68it [00:52,  1.34it/s]69it [00:52,  1.34it/s]70it [00:53,  1.34it/s]71it [00:54,  1.34it/s]72it [00:55,  1.34it/s]73it [00:55,  1.34it/s]74it [00:56,  1.34it/s]75it [00:57,  1.34it/s]76it [00:58,  1.34it/s]77it [00:58,  1.35it/s]78it [00:59,  1.35it/s]79it [01:00,  1.35it/s]80it [01:00,  1.35it/s]81it [01:01,  1.35it/s]82it [01:02,  1.35it/s]83it [01:03,  1.35it/s]84it [01:03,  1.35it/s]85it [01:04,  1.35it/s]86it [01:05,  1.35it/s]87it [01:06,  1.35it/s]88it [01:06,  1.35it/s]89it [01:07,  1.35it/s]90it [01:08,  1.35it/s]91it [01:09,  1.34it/s]92it [01:09,  1.34it/s]93it [01:10,  1.34it/s]94it [01:11,  1.34it/s]95it [01:12,  1.34it/s]96it [01:12,  1.34it/s]97it [01:13,  1.34it/s]98it [01:14,  1.34it/s]99it [01:15,  1.34it/s]100it [01:15,  1.34it/s]101it [01:16,  1.35it/s]102it [01:17,  1.35it/s]103it [01:18,  1.34it/s]104it [01:18,  1.35it/s]105it [01:19,  1.35it/s]106it [01:20,  1.35it/s]107it [01:21,  1.35it/s]108it [01:21,  1.34it/s]109it [01:22,  1.34it/s]110it [01:23,  1.34it/s]111it [01:24,  1.34it/s]112it [01:24,  1.34it/s]113it [01:25,  1.34it/s]114it [01:26,  1.34it/s]115it [01:27,  1.34it/s]116it [01:27,  1.34it/s]117it [01:28,  1.35it/s]118it [01:29,  1.35it/s]119it [01:29,  1.35it/s]120it [01:30,  1.35it/s]121it [01:31,  1.35it/s]122it [01:32,  1.35it/s]123it [01:32,  1.35it/s]124it [01:33,  1.35it/s]125it [01:34,  1.35it/s]126it [01:35,  1.35it/s]127it [01:35,  1.35it/s]128it [01:36,  1.35it/s]129it [01:37,  1.35it/s]130it [01:38,  1.35it/s]131it [01:38,  1.35it/s]132it [01:39,  1.35it/s]133it [01:40,  1.35it/s]134it [01:41,  1.34it/s]135it [01:41,  1.35it/s]136it [01:42,  1.35it/s]137it [01:43,  1.35it/s]138it [01:44,  1.35it/s]139it [01:44,  1.35it/s]140it [01:45,  1.35it/s]141it [01:46,  1.35it/s]142it [01:47,  1.35it/s]143it [01:47,  1.34it/s]144it [01:48,  1.35it/s]145it [01:49,  1.35it/s]146it [01:50,  1.34it/s]147it [01:50,  1.34it/s]148it [01:51,  1.34it/s]149it [01:52,  1.35it/s]150it [01:53,  1.35it/s]151it [01:53,  1.35it/s]152it [01:54,  1.34it/s]153it [01:55,  1.34it/s]154it [01:56,  1.34it/s]155it [01:56,  1.34it/s]156it [01:57,  1.34it/s]157it [01:58,  1.34it/s]158it [01:58,  1.34it/s]159it [01:59,  1.34it/s]160it [02:00,  1.34it/s]161it [02:01,  1.34it/s]162it [02:01,  1.34it/s]163it [02:02,  1.34it/s]164it [02:03,  1.35it/s]165it [02:04,  1.34it/s]166it [02:04,  1.34it/s]167it [02:05,  1.35it/s]168it [02:06,  1.35it/s]169it [02:07,  1.35it/s]170it [02:07,  1.35it/s]171it [02:08,  1.35it/s]172it [02:09,  1.34it/s]173it [02:10,  1.34it/s]174it [02:10,  1.35it/s]175it [02:11,  1.35it/s]176it [02:12,  1.35it/s]177it [02:13,  1.35it/s]178it [02:13,  1.35it/s]179it [02:14,  1.35it/s]180it [02:15,  1.35it/s]181it [02:16,  1.34it/s]182it [02:16,  1.35it/s]183it [02:17,  1.35it/s]184it [02:18,  1.35it/s]185it [02:19,  1.35it/s]186it [02:19,  1.35it/s]187it [02:20,  1.35it/s]188it [02:21,  1.35it/s]189it [02:22,  1.35it/s]190it [02:22,  1.35it/s]191it [02:23,  1.34it/s]192it [02:24,  1.34it/s]193it [02:25,  1.34it/s]194it [02:25,  1.34it/s]195it [02:26,  1.34it/s]196it [02:27,  1.34it/s]197it [02:27,  1.34it/s]198it [02:28,  1.34it/s]199it [02:29,  1.34it/s]200it [02:30,  1.34it/s]201it [02:30,  1.34it/s]202it [02:31,  1.34it/s]203it [02:32,  1.34it/s]204it [02:33,  1.34it/s]205it [02:33,  1.35it/s]206it [02:34,  1.35it/s]207it [02:35,  1.35it/s]208it [02:36,  1.35it/s]209it [02:36,  1.34it/s]210it [02:37,  1.35it/s]211it [02:38,  1.35it/s]212it [02:39,  1.35it/s]213it [02:39,  1.34it/s]214it [02:40,  1.34it/s]215it [02:41,  1.34it/s]216it [02:42,  1.34it/s]217it [02:42,  1.34it/s]218it [02:43,  1.34it/s]219it [02:44,  1.34it/s]220it [02:45,  1.34it/s]221it [02:45,  1.34it/s]222it [02:46,  1.35it/s]223it [02:47,  1.35it/s]224it [02:48,  1.35it/s]225it [02:48,  1.35it/s]226it [02:49,  1.34it/s]227it [02:50,  1.34it/s]228it [02:51,  1.34it/s]229it [02:51,  1.34it/s]230it [02:52,  1.34it/s]231it [02:53,  1.34it/s]232it [02:54,  1.35it/s]233it [02:54,  1.35it/s]234it [02:55,  1.35it/s]235it [02:56,  1.35it/s]236it [02:56,  1.35it/s]237it [02:57,  1.35it/s]238it [02:58,  1.35it/s]239it [02:59,  1.34it/s]240it [02:59,  1.34it/s]241it [03:00,  1.34it/s]242it [03:01,  1.34it/s]243it [03:02,  1.34it/s]244it [03:02,  1.34it/s]245it [03:03,  1.34it/s]246it [03:04,  1.34it/s]247it [03:05,  1.34it/s]248it [03:05,  1.34it/s]249it [03:06,  1.34it/s]250it [03:07,  1.34it/s]250it [03:07,  1.33it/s]
+ ===> Epoch 1
+ - Average training metrics: accuracy={'accuracy': 0.61975}
+ - Average validation metrics: accuracy={'accuracy': 0.6217125382262997}
+Epoch 2 training:
+0it [00:00, ?it/s]1it [00:01,  1.05s/it]2it [00:01,  1.15it/s]3it [00:02,  1.23it/s]4it [00:03,  1.27it/s]5it [00:04,  1.30it/s]6it [00:04,  1.32it/s]7it [00:05,  1.32it/s]8it [00:06,  1.33it/s]9it [00:06,  1.34it/s]10it [00:07,  1.34it/s]11it [00:08,  1.34it/s]12it [00:09,  1.34it/s]13it [00:09,  1.34it/s]14it [00:10,  1.34it/s]15it [00:11,  1.34it/s]16it [00:12,  1.34it/s]17it [00:12,  1.34it/s]18it [00:13,  1.34it/s]19it [00:14,  1.34it/s]20it [00:15,  1.34it/s]21it [00:15,  1.34it/s]22it [00:16,  1.34it/s]23it [00:17,  1.34it/s]24it [00:18,  1.34it/s]25it [00:18,  1.35it/s]26it [00:19,  1.34it/s]27it [00:20,  1.34it/s]28it [00:21,  1.35it/s]29it [00:21,  1.35it/s]30it [00:22,  1.35it/s]31it [00:23,  1.35it/s]32it [00:24,  1.35it/s]33it [00:24,  1.35it/s]34it [00:25,  1.35it/s]35it [00:26,  1.35it/s]36it [00:27,  1.35it/s]37it [00:27,  1.35it/s]38it [00:28,  1.35it/s]39it [00:29,  1.34it/s]40it [00:30,  1.34it/s]41it [00:30,  1.34it/s]42it [00:31,  1.35it/s]43it [00:32,  1.35it/s]44it [00:33,  1.35it/s]45it [00:33,  1.35it/s]46it [00:34,  1.35it/s]47it [00:35,  1.34it/s]48it [00:35,  1.34it/s]49it [00:36,  1.35it/s]50it [00:37,  1.35it/s]51it [00:38,  1.35it/s]52it [00:38,  1.34it/s]53it [00:39,  1.34it/s]54it [00:40,  1.34it/s]55it [00:41,  1.34it/s]56it [00:41,  1.34it/s]57it [00:42,  1.34it/s]58it [00:43,  1.34it/s]59it [00:44,  1.34it/s]60it [00:44,  1.35it/s]61it [00:45,  1.34it/s]62it [00:46,  1.34it/s]63it [00:47,  1.34it/s]64it [00:47,  1.34it/s]65it [00:48,  1.34it/s]66it [00:49,  1.34it/s]67it [00:50,  1.34it/s]68it [00:50,  1.34it/s]69it [00:51,  1.34it/s]70it [00:52,  1.34it/s]71it [00:53,  1.34it/s]72it [00:53,  1.34it/s]73it [00:54,  1.34it/s]74it [00:55,  1.34it/s]75it [00:56,  1.34it/s]76it [00:56,  1.34it/s]77it [00:57,  1.35it/s]78it [00:58,  1.34it/s]79it [00:59,  1.34it/s]80it [00:59,  1.34it/s]81it [01:00,  1.34it/s]82it [01:01,  1.35it/s]83it [01:02,  1.35it/s]84it [01:02,  1.34it/s]85it [01:03,  1.34it/s]86it [01:04,  1.34it/s]87it [01:05,  1.34it/s]88it [01:05,  1.34it/s]89it [01:06,  1.34it/s]90it [01:07,  1.34it/s]91it [01:07,  1.34it/s]92it [01:08,  1.34it/s]93it [01:09,  1.34it/s]94it [01:10,  1.34it/s]95it [01:10,  1.34it/s]96it [01:11,  1.34it/s]97it [01:12,  1.34it/s]98it [01:13,  1.34it/s]99it [01:13,  1.34it/s]100it [01:14,  1.34it/s]101it [01:15,  1.34it/s]102it [01:16,  1.34it/s]103it [01:16,  1.34it/s]104it [01:17,  1.34it/s]105it [01:18,  1.34it/s]106it [01:19,  1.34it/s]107it [01:19,  1.34it/s]108it [01:20,  1.34it/s]109it [01:21,  1.34it/s]110it [01:22,  1.34it/s]111it [01:22,  1.34it/s]112it [01:23,  1.34it/s]113it [01:24,  1.34it/s]114it [01:25,  1.34it/s]115it [01:25,  1.34it/s]116it [01:26,  1.34it/s]117it [01:27,  1.34it/s]118it [01:28,  1.34it/s]119it [01:28,  1.35it/s]120it [01:29,  1.35it/s]121it [01:30,  1.35it/s]122it [01:31,  1.35it/s]123it [01:31,  1.35it/s]124it [01:32,  1.35it/s]125it [01:33,  1.35it/s]126it [01:34,  1.35it/s]127it [01:34,  1.35it/s]128it [01:35,  1.35it/s]129it [01:36,  1.34it/s]130it [01:36,  1.34it/s]131it [01:37,  1.35it/s]132it [01:38,  1.35it/s]133it [01:39,  1.35it/s]134it [01:39,  1.34it/s]135it [01:40,  1.35it/s]136it [01:41,  1.35it/s]137it [01:42,  1.35it/s]138it [01:42,  1.35it/s]139it [01:43,  1.35it/s]140it [01:44,  1.35it/s]141it [01:45,  1.34it/s]142it [01:45,  1.35it/s]143it [01:46,  1.34it/s]144it [01:47,  1.35it/s]145it [01:48,  1.34it/s]146it [01:48,  1.34it/s]147it [01:49,  1.34it/s]148it [01:50,  1.34it/s]149it [01:51,  1.35it/s]150it [01:51,  1.35it/s]151it [01:52,  1.34it/s]152it [01:53,  1.34it/s]153it [01:54,  1.34it/s]154it [01:54,  1.34it/s]155it [01:55,  1.34it/s]156it [01:56,  1.34it/s]157it [01:57,  1.34it/s]158it [01:57,  1.34it/s]159it [01:58,  1.34it/s]160it [01:59,  1.34it/s]161it [02:00,  1.34it/s]162it [02:00,  1.34it/s]163it [02:01,  1.34it/s]164it [02:02,  1.34it/s]165it [02:03,  1.34it/s]166it [02:03,  1.34it/s]167it [02:04,  1.34it/s]168it [02:05,  1.35it/s]169it [02:05,  1.35it/s]170it [02:06,  1.34it/s]171it [02:07,  1.34it/s]172it [02:08,  1.34it/s]173it [02:08,  1.34it/s]174it [02:09,  1.34it/s]175it [02:10,  1.35it/s]176it [02:11,  1.34it/s]177it [02:11,  1.34it/s]178it [02:12,  1.35it/s]179it [02:13,  1.34it/s]180it [02:14,  1.34it/s]181it [02:14,  1.34it/s]182it [02:15,  1.35it/s]183it [02:16,  1.35it/s]184it [02:17,  1.35it/s]185it [02:17,  1.35it/s]186it [02:18,  1.35it/s]187it [02:19,  1.34it/s]188it [02:20,  1.34it/s]189it [02:20,  1.34it/s]190it [02:21,  1.35it/s]191it [02:22,  1.34it/s]192it [02:23,  1.34it/s]193it [02:23,  1.34it/s]194it [02:24,  1.34it/s]195it [02:25,  1.34it/s]196it [02:26,  1.34it/s]197it [02:26,  1.34it/s]198it [02:27,  1.34it/s]199it [02:28,  1.34it/s]200it [02:29,  1.34it/s]201it [02:29,  1.35it/s]202it [02:30,  1.34it/s]203it [02:31,  1.34it/s]204it [02:32,  1.34it/s]205it [02:32,  1.34it/s]206it [02:33,  1.34it/s]207it [02:34,  1.34it/s]208it [02:34,  1.34it/s]209it [02:35,  1.34it/s]210it [02:36,  1.35it/s]211it [02:37,  1.35it/s]212it [02:37,  1.35it/s]213it [02:38,  1.34it/s]214it [02:39,  1.34it/s]215it [02:40,  1.34it/s]216it [02:40,  1.34it/s]217it [02:41,  1.34it/s]218it [02:42,  1.34it/s]219it [02:43,  1.34it/s]220it [02:43,  1.34it/s]221it [02:44,  1.34it/s]222it [02:45,  1.34it/s]223it [02:46,  1.34it/s]224it [02:46,  1.35it/s]225it [02:47,  1.34it/s]226it [02:48,  1.34it/s]227it [02:49,  1.34it/s]228it [02:49,  1.34it/s]229it [02:50,  1.34it/s]230it [02:51,  1.34it/s]231it [02:52,  1.34it/s]232it [02:52,  1.34it/s]233it [02:53,  1.35it/s]234it [02:54,  1.35it/s]235it [02:55,  1.34it/s]236it [02:55,  1.35it/s]237it [02:56,  1.35it/s]238it [02:57,  1.35it/s]239it [02:58,  1.35it/s]240it [02:58,  1.35it/s]241it [02:59,  1.34it/s]242it [03:00,  1.34it/s]243it [03:01,  1.34it/s]244it [03:01,  1.34it/s]245it [03:02,  1.34it/s]246it [03:03,  1.34it/s]247it [03:04,  1.34it/s]248it [03:04,  1.34it/s]249it [03:05,  1.34it/s]250it [03:06,  1.34it/s]250it [03:06,  1.34it/s]
+ ===> Epoch 2
+ - Average training metrics: accuracy={'accuracy': 0.647375}
+ - Average validation metrics: accuracy={'accuracy': 0.6678899082568808}
+Epoch 3 training:
+0it [00:00, ?it/s]1it [00:01,  1.06s/it]2it [00:01,  1.15it/s]3it [00:02,  1.23it/s]4it [00:03,  1.27it/s]5it [00:04,  1.30it/s]6it [00:04,  1.31it/s]7it [00:05,  1.32it/s]8it [00:06,  1.33it/s]9it [00:06,  1.34it/s]10it [00:07,  1.34it/s]11it [00:08,  1.34it/s]12it [00:09,  1.34it/s]13it [00:09,  1.34it/s]14it [00:10,  1.34it/s]15it [00:11,  1.34it/s]16it [00:12,  1.34it/s]17it [00:12,  1.34it/s]18it [00:13,  1.34it/s]19it [00:14,  1.34it/s]20it [00:15,  1.34it/s]21it [00:15,  1.34it/s]22it [00:16,  1.34it/s]23it [00:17,  1.34it/s]24it [00:18,  1.35it/s]25it [00:18,  1.35it/s]26it [00:19,  1.35it/s]27it [00:20,  1.35it/s]28it [00:21,  1.35it/s]29it [00:21,  1.35it/s]30it [00:22,  1.35it/s]31it [00:23,  1.35it/s]32it [00:24,  1.35it/s]33it [00:24,  1.35it/s]34it [00:25,  1.35it/s]35it [00:26,  1.35it/s]36it [00:27,  1.35it/s]37it [00:27,  1.35it/s]38it [00:28,  1.35it/s]39it [00:29,  1.35it/s]40it [00:30,  1.35it/s]41it [00:30,  1.34it/s]42it [00:31,  1.34it/s]43it [00:32,  1.35it/s]44it [00:33,  1.35it/s]45it [00:33,  1.35it/s]46it [00:34,  1.35it/s]47it [00:35,  1.34it/s]48it [00:35,  1.34it/s]49it [00:36,  1.35it/s]50it [00:37,  1.35it/s]51it [00:38,  1.35it/s]52it [00:38,  1.34it/s]53it [00:39,  1.34it/s]54it [00:40,  1.34it/s]55it [00:41,  1.34it/s]56it [00:41,  1.34it/s]57it [00:42,  1.34it/s]58it [00:43,  1.34it/s]59it [00:44,  1.34it/s]60it [00:44,  1.35it/s]61it [00:45,  1.34it/s]62it [00:46,  1.34it/s]63it [00:47,  1.34it/s]64it [00:47,  1.34it/s]65it [00:48,  1.34it/s]66it [00:49,  1.34it/s]67it [00:50,  1.34it/s]68it [00:50,  1.34it/s]69it [00:51,  1.34it/s]70it [00:52,  1.34it/s]71it [00:53,  1.34it/s]72it [00:53,  1.34it/s]73it [00:54,  1.34it/s]74it [00:55,  1.34it/s]75it [00:56,  1.34it/s]76it [00:56,  1.34it/s]77it [00:57,  1.35it/s]78it [00:58,  1.34it/s]79it [00:59,  1.34it/s]80it [00:59,  1.34it/s]81it [01:00,  1.34it/s]82it [01:01,  1.35it/s]83it [01:02,  1.35it/s]84it [01:02,  1.34it/s]85it [01:03,  1.34it/s]86it [01:04,  1.34it/s]87it [01:05,  1.34it/s]88it [01:05,  1.34it/s]89it [01:06,  1.34it/s]90it [01:07,  1.34it/s]91it [01:07,  1.34it/s]92it [01:08,  1.34it/s]93it [01:09,  1.34it/s]94it [01:10,  1.34it/s]95it [01:10,  1.34it/s]96it [01:11,  1.34it/s]97it [01:12,  1.34it/s]98it [01:13,  1.34it/s]99it [01:13,  1.34it/s]100it [01:14,  1.34it/s]101it [01:15,  1.34it/s]102it [01:16,  1.34it/s]103it [01:16,  1.34it/s]104it [01:17,  1.34it/s]105it [01:18,  1.34it/s]106it [01:19,  1.34it/s]107it [01:19,  1.34it/s]108it [01:20,  1.34it/s]109it [01:21,  1.34it/s]110it [01:22,  1.34it/s]111it [01:22,  1.34it/s]112it [01:23,  1.34it/s]113it [01:24,  1.34it/s]114it [01:25,  1.34it/s]115it [01:25,  1.34it/s]116it [01:26,  1.34it/s]117it [01:27,  1.34it/s]118it [01:28,  1.34it/s]119it [01:28,  1.35it/s]120it [01:29,  1.34it/s]121it [01:30,  1.34it/s]122it [01:31,  1.35it/s]123it [01:31,  1.35it/s]124it [01:32,  1.35it/s]125it [01:33,  1.35it/s]126it [01:34,  1.35it/s]127it [01:34,  1.35it/s]128it [01:35,  1.35it/s]129it [01:36,  1.34it/s]130it [01:36,  1.34it/s]131it [01:37,  1.34it/s]132it [01:38,  1.34it/s]133it [01:39,  1.35it/s]134it [01:39,  1.34it/s]135it [01:40,  1.34it/s]136it [01:41,  1.35it/s]137it [01:42,  1.35it/s]138it [01:42,  1.35it/s]139it [01:43,  1.35it/s]140it [01:44,  1.35it/s]141it [01:45,  1.35it/s]142it [01:45,  1.35it/s]143it [01:46,  1.34it/s]144it [01:47,  1.34it/s]145it [01:48,  1.34it/s]146it [01:48,  1.34it/s]147it [01:49,  1.34it/s]148it [01:50,  1.34it/s]149it [01:51,  1.35it/s]150it [01:51,  1.35it/s]151it [01:52,  1.35it/s]152it [01:53,  1.34it/s]153it [01:54,  1.34it/s]154it [01:54,  1.34it/s]155it [01:55,  1.34it/s]156it [01:56,  1.34it/s]157it [01:57,  1.35it/s]158it [01:57,  1.34it/s]159it [01:58,  1.34it/s]160it [01:59,  1.34it/s]161it [02:00,  1.34it/s]162it [02:00,  1.34it/s]163it [02:01,  1.34it/s]164it [02:02,  1.34it/s]165it [02:03,  1.34it/s]166it [02:03,  1.34it/s]167it [02:04,  1.34it/s]168it [02:05,  1.35it/s]169it [02:05,  1.35it/s]170it [02:06,  1.35it/s]171it [02:07,  1.34it/s]172it [02:08,  1.34it/s]173it [02:08,  1.34it/s]174it [02:09,  1.34it/s]175it [02:10,  1.35it/s]176it [02:11,  1.34it/s]177it [02:11,  1.34it/s]178it [02:12,  1.35it/s]179it [02:13,  1.34it/s]180it [02:14,  1.34it/s]181it [02:14,  1.34it/s]182it [02:15,  1.34it/s]183it [02:16,  1.34it/s]184it [02:17,  1.35it/s]185it [02:17,  1.35it/s]186it [02:18,  1.35it/s]187it [02:19,  1.34it/s]188it [02:20,  1.34it/s]189it [02:20,  1.34it/s]190it [02:21,  1.35it/s]191it [02:22,  1.34it/s]192it [02:23,  1.34it/s]193it [02:23,  1.34it/s]194it [02:24,  1.34it/s]195it [02:25,  1.34it/s]196it [02:26,  1.34it/s]197it [02:26,  1.34it/s]198it [02:27,  1.34it/s]199it [02:28,  1.34it/s]200it [02:29,  1.34it/s]201it [02:29,  1.34it/s]202it [02:30,  1.34it/s]203it [02:31,  1.34it/s]204it [02:32,  1.34it/s]205it [02:32,  1.35it/s]206it [02:33,  1.35it/s]207it [02:34,  1.35it/s]208it [02:34,  1.35it/s]209it [02:35,  1.34it/s]210it [02:36,  1.35it/s]211it [02:37,  1.35it/s]212it [02:37,  1.35it/s]213it [02:38,  1.34it/s]214it [02:39,  1.34it/s]215it [02:40,  1.34it/s]216it [02:40,  1.34it/s]217it [02:41,  1.34it/s]218it [02:42,  1.34it/s]219it [02:43,  1.34it/s]220it [02:43,  1.34it/s]221it [02:44,  1.34it/s]222it [02:45,  1.35it/s]223it [02:46,  1.34it/s]224it [02:46,  1.35it/s]225it [02:47,  1.34it/s]226it [02:48,  1.34it/s]227it [02:49,  1.34it/s]228it [02:49,  1.34it/s]229it [02:50,  1.34it/s]230it [02:51,  1.34it/s]231it [02:52,  1.34it/s]232it [02:52,  1.35it/s]233it [02:53,  1.35it/s]234it [02:54,  1.35it/s]235it [02:55,  1.35it/s]236it [02:55,  1.35it/s]237it [02:56,  1.35it/s]238it [02:57,  1.35it/s]239it [02:58,  1.35it/s]240it [02:58,  1.35it/s]241it [02:59,  1.35it/s]242it [03:00,  1.35it/s]243it [03:01,  1.35it/s]244it [03:01,  1.35it/s]245it [03:02,  1.35it/s]246it [03:03,  1.34it/s]247it [03:03,  1.34it/s]248it [03:04,  1.34it/s]249it [03:05,  1.34it/s]250it [03:06,  1.35it/s]250it [03:06,  1.34it/s]
+ ===> Epoch 3
+ - Average training metrics: accuracy={'accuracy': 0.692125}
+ - Average validation metrics: accuracy={'accuracy': 0.7039755351681957}
+Epoch 4 training:
+0it [00:00, ?it/s]1it [00:01,  1.06s/it]2it [00:01,  1.15it/s]3it [00:02,  1.23it/s]4it [00:03,  1.27it/s]5it [00:04,  1.30it/s]6it [00:04,  1.32it/s]7it [00:05,  1.33it/s]8it [00:06,  1.33it/s]9it [00:06,  1.34it/s]10it [00:07,  1.34it/s]11it [00:08,  1.34it/s]12it [00:09,  1.34it/s]13it [00:09,  1.35it/s]14it [00:10,  1.35it/s]15it [00:11,  1.34it/s]16it [00:12,  1.34it/s]17it [00:12,  1.34it/s]18it [00:13,  1.34it/s]19it [00:14,  1.34it/s]20it [00:15,  1.34it/s]21it [00:15,  1.34it/s]22it [00:16,  1.34it/s]23it [00:17,  1.34it/s]24it [00:18,  1.34it/s]25it [00:18,  1.35it/s]26it [00:19,  1.34it/s]27it [00:20,  1.34it/s]28it [00:21,  1.35it/s]29it [00:21,  1.35it/s]30it [00:22,  1.35it/s]31it [00:23,  1.35it/s]32it [00:24,  1.35it/s]33it [00:24,  1.35it/s]34it [00:25,  1.35it/s]35it [00:26,  1.35it/s]36it [00:27,  1.35it/s]37it [00:27,  1.35it/s]38it [00:28,  1.35it/s]39it [00:29,  1.35it/s]40it [00:30,  1.34it/s]41it [00:30,  1.34it/s]42it [00:31,  1.35it/s]43it [00:32,  1.35it/s]44it [00:33,  1.35it/s]45it [00:33,  1.35it/s]46it [00:34,  1.35it/s]47it [00:35,  1.35it/s]48it [00:35,  1.34it/s]49it [00:36,  1.35it/s]50it [00:37,  1.35it/s]51it [00:38,  1.35it/s]52it [00:38,  1.34it/s]53it [00:39,  1.34it/s]54it [00:40,  1.34it/s]55it [00:41,  1.34it/s]56it [00:41,  1.34it/s]57it [00:42,  1.34it/s]58it [00:43,  1.34it/s]59it [00:44,  1.34it/s]60it [00:44,  1.34it/s]61it [00:45,  1.34it/s]62it [00:46,  1.34it/s]63it [00:47,  1.34it/s]64it [00:47,  1.34it/s]65it [00:48,  1.34it/s]66it [00:49,  1.34it/s]67it [00:50,  1.34it/s]68it [00:50,  1.34it/s]69it [00:51,  1.34it/s]70it [00:52,  1.34it/s]71it [00:53,  1.34it/s]72it [00:53,  1.34it/s]73it [00:54,  1.35it/s]74it [00:55,  1.34it/s]75it [00:56,  1.34it/s]76it [00:56,  1.35it/s]77it [00:57,  1.35it/s]78it [00:58,  1.34it/s]79it [00:59,  1.34it/s]80it [00:59,  1.34it/s]81it [01:00,  1.34it/s]82it [01:01,  1.34it/s]83it [01:02,  1.35it/s]84it [01:02,  1.35it/s]85it [01:03,  1.35it/s]86it [01:04,  1.35it/s]87it [01:04,  1.35it/s]88it [01:05,  1.35it/s]89it [01:06,  1.35it/s]90it [01:07,  1.35it/s]91it [01:07,  1.34it/s]92it [01:08,  1.34it/s]93it [01:09,  1.34it/s]94it [01:10,  1.34it/s]95it [01:10,  1.34it/s]96it [01:11,  1.34it/s]97it [01:12,  1.34it/s]98it [01:13,  1.34it/s]99it [01:13,  1.34it/s]100it [01:14,  1.34it/s]101it [01:15,  1.34it/s]102it [01:16,  1.34it/s]103it [01:16,  1.34it/s]104it [01:17,  1.34it/s]105it [01:18,  1.34it/s]106it [01:19,  1.34it/s]107it [01:19,  1.34it/s]108it [01:20,  1.34it/s]109it [01:21,  1.34it/s]110it [01:22,  1.34it/s]111it [01:22,  1.34it/s]112it [01:23,  1.34it/s]113it [01:24,  1.34it/s]114it [01:25,  1.34it/s]115it [01:25,  1.34it/s]116it [01:26,  1.34it/s]117it [01:27,  1.34it/s]118it [01:28,  1.34it/s]119it [01:28,  1.35it/s]120it [01:29,  1.35it/s]121it [01:30,  1.35it/s]122it [01:31,  1.35it/s]123it [01:31,  1.35it/s]124it [01:32,  1.35it/s]125it [01:33,  1.35it/s]126it [01:33,  1.35it/s]127it [01:34,  1.35it/s]128it [01:35,  1.34it/s]129it [01:36,  1.34it/s]130it [01:36,  1.34it/s]131it [01:37,  1.34it/s]132it [01:38,  1.34it/s]133it [01:39,  1.35it/s]134it [01:39,  1.34it/s]135it [01:40,  1.34it/s]136it [01:41,  1.35it/s]137it [01:42,  1.35it/s]138it [01:42,  1.34it/s]139it [01:43,  1.34it/s]140it [01:44,  1.34it/s]141it [01:45,  1.34it/s]142it [01:45,  1.35it/s]143it [01:46,  1.34it/s]144it [01:47,  1.34it/s]145it [01:48,  1.34it/s]146it [01:48,  1.34it/s]147it [01:49,  1.34it/s]148it [01:50,  1.34it/s]149it [01:51,  1.34it/s]150it [01:51,  1.34it/s]151it [01:52,  1.34it/s]152it [01:53,  1.34it/s]153it [01:54,  1.34it/s]154it [01:54,  1.34it/s]155it [01:55,  1.34it/s]156it [01:56,  1.34it/s]157it [01:57,  1.34it/s]158it [01:57,  1.34it/s]159it [01:58,  1.34it/s]160it [01:59,  1.34it/s]161it [02:00,  1.34it/s]162it [02:00,  1.34it/s]163it [02:01,  1.34it/s]164it [02:02,  1.34it/s]165it [02:03,  1.34it/s]166it [02:03,  1.34it/s]167it [02:04,  1.34it/s]168it [02:05,  1.35it/s]169it [02:05,  1.35it/s]170it [02:06,  1.35it/s]171it [02:07,  1.34it/s]172it [02:08,  1.34it/s]173it [02:08,  1.34it/s]174it [02:09,  1.34it/s]175it [02:10,  1.35it/s]176it [02:11,  1.34it/s]177it [02:11,  1.34it/s]178it [02:12,  1.35it/s]179it [02:13,  1.35it/s]180it [02:14,  1.34it/s]181it [02:14,  1.34it/s]182it [02:15,  1.35it/s]183it [02:16,  1.35it/s]184it [02:17,  1.35it/s]185it [02:17,  1.35it/s]186it [02:18,  1.35it/s]187it [02:19,  1.34it/s]188it [02:20,  1.34it/s]189it [02:20,  1.34it/s]190it [02:21,  1.35it/s]191it [02:22,  1.34it/s]192it [02:23,  1.34it/s]193it [02:23,  1.34it/s]194it [02:24,  1.34it/s]195it [02:25,  1.34it/s]196it [02:26,  1.34it/s]197it [02:26,  1.34it/s]198it [02:27,  1.34it/s]199it [02:28,  1.34it/s]200it [02:29,  1.34it/s]201it [02:29,  1.34it/s]202it [02:30,  1.34it/s]203it [02:31,  1.34it/s]204it [02:32,  1.34it/s]205it [02:32,  1.35it/s]206it [02:33,  1.35it/s]207it [02:34,  1.35it/s]208it [02:34,  1.34it/s]209it [02:35,  1.34it/s]210it [02:36,  1.35it/s]211it [02:37,  1.35it/s]212it [02:37,  1.35it/s]213it [02:38,  1.34it/s]214it [02:39,  1.34it/s]215it [02:40,  1.34it/s]216it [02:40,  1.34it/s]217it [02:41,  1.34it/s]218it [02:42,  1.34it/s]219it [02:43,  1.34it/s]220it [02:43,  1.34it/s]221it [02:44,  1.34it/s]222it [02:45,  1.34it/s]223it [02:46,  1.34it/s]224it [02:46,  1.35it/s]225it [02:47,  1.34it/s]226it [02:48,  1.34it/s]227it [02:49,  1.34it/s]228it [02:49,  1.34it/s]229it [02:50,  1.34it/s]230it [02:51,  1.34it/s]231it [02:52,  1.34it/s]232it [02:52,  1.34it/s]233it [02:53,  1.35it/s]234it [02:54,  1.35it/s]235it [02:55,  1.35it/s]236it [02:55,  1.35it/s]237it [02:56,  1.35it/s]238it [02:57,  1.35it/s]239it [02:58,  1.35it/s]240it [02:58,  1.35it/s]241it [02:59,  1.34it/s]242it [03:00,  1.34it/s]243it [03:01,  1.34it/s]244it [03:01,  1.34it/s]245it [03:02,  1.34it/s]246it [03:03,  1.34it/s]247it [03:03,  1.34it/s]248it [03:04,  1.34it/s]249it [03:05,  1.34it/s]250it [03:06,  1.34it/s]250it [03:06,  1.34it/s]
+ ===> Epoch 4
+ - Average training metrics: accuracy={'accuracy': 0.72075}
+ - Average validation metrics: accuracy={'accuracy': 0.7290519877675841}
+Epoch 5 training:
+0it [00:00, ?it/s]1it [00:01,  1.05s/it]2it [00:01,  1.15it/s]3it [00:02,  1.23it/s]4it [00:03,  1.27it/s]5it [00:04,  1.30it/s]6it [00:04,  1.32it/s]7it [00:05,  1.32it/s]8it [00:06,  1.33it/s]9it [00:06,  1.34it/s]10it [00:07,  1.34it/s]11it [00:08,  1.34it/s]12it [00:09,  1.34it/s]13it [00:09,  1.34it/s]14it [00:10,  1.34it/s]15it [00:11,  1.34it/s]16it [00:12,  1.34it/s]17it [00:12,  1.34it/s]18it [00:13,  1.34it/s]19it [00:14,  1.34it/s]20it [00:15,  1.34it/s]21it [00:15,  1.34it/s]22it [00:16,  1.34it/s]23it [00:17,  1.34it/s]24it [00:18,  1.34it/s]25it [00:18,  1.34it/s]26it [00:19,  1.34it/s]27it [00:20,  1.34it/s]28it [00:21,  1.34it/s]29it [00:21,  1.34it/s]30it [00:22,  1.34it/s]31it [00:23,  1.34it/s]32it [00:24,  1.34it/s]33it [00:24,  1.34it/s]34it [00:25,  1.35it/s]35it [00:26,  1.35it/s]36it [00:27,  1.35it/s]37it [00:27,  1.35it/s]38it [00:28,  1.34it/s]39it [00:29,  1.34it/s]40it [00:30,  1.34it/s]41it [00:30,  1.34it/s]42it [00:31,  1.34it/s]43it [00:32,  1.34it/s]44it [00:33,  1.34it/s]45it [00:33,  1.34it/s]46it [00:34,  1.34it/s]47it [00:35,  1.34it/s]48it [00:36,  1.34it/s]49it [00:36,  1.35it/s]50it [00:37,  1.35it/s]51it [00:38,  1.35it/s]52it [00:38,  1.34it/s]53it [00:39,  1.34it/s]54it [00:40,  1.34it/s]55it [00:41,  1.34it/s]56it [00:41,  1.34it/s]57it [00:42,  1.34it/s]58it [00:43,  1.34it/s]59it [00:44,  1.34it/s]60it [00:44,  1.35it/s]61it [00:45,  1.34it/s]62it [00:46,  1.34it/s]63it [00:47,  1.34it/s]64it [00:47,  1.34it/s]65it [00:48,  1.34it/s]66it [00:49,  1.34it/s]67it [00:50,  1.34it/s]68it [00:50,  1.34it/s]69it [00:51,  1.34it/s]70it [00:52,  1.34it/s]71it [00:53,  1.34it/s]72it [00:53,  1.34it/s]73it [00:54,  1.34it/s]74it [00:55,  1.34it/s]75it [00:56,  1.34it/s]76it [00:56,  1.34it/s]77it [00:57,  1.35it/s]78it [00:58,  1.34it/s]79it [00:59,  1.34it/s]80it [00:59,  1.34it/s]81it [01:00,  1.34it/s]82it [01:01,  1.34it/s]83it [01:02,  1.34it/s]84it [01:02,  1.34it/s]85it [01:03,  1.34it/s]86it [01:04,  1.34it/s]87it [01:05,  1.34it/s]88it [01:05,  1.34it/s]89it [01:06,  1.34it/s]90it [01:07,  1.34it/s]91it [01:07,  1.35it/s]92it [01:08,  1.34it/s]93it [01:09,  1.35it/s]94it [01:10,  1.35it/s]95it [01:10,  1.35it/s]96it [01:11,  1.35it/s]97it [01:12,  1.35it/s]98it [01:13,  1.35it/s]99it [01:13,  1.34it/s]100it [01:14,  1.35it/s]101it [01:15,  1.35it/s]102it [01:16,  1.35it/s]103it [01:16,  1.35it/s]104it [01:17,  1.35it/s]105it [01:18,  1.35it/s]106it [01:19,  1.35it/s]107it [01:19,  1.34it/s]108it [01:20,  1.34it/s]109it [01:21,  1.35it/s]110it [01:22,  1.35it/s]111it [01:22,  1.34it/s]112it [01:23,  1.34it/s]113it [01:24,  1.35it/s]114it [01:25,  1.35it/s]115it [01:25,  1.34it/s]116it [01:26,  1.34it/s]117it [01:27,  1.34it/s]118it [01:28,  1.35it/s]119it [01:28,  1.35it/s]120it [01:29,  1.35it/s]121it [01:30,  1.35it/s]122it [01:31,  1.35it/s]123it [01:31,  1.35it/s]124it [01:32,  1.35it/s]125it [01:33,  1.35it/s]126it [01:33,  1.35it/s]127it [01:34,  1.35it/s]128it [01:35,  1.35it/s]129it [01:36,  1.35it/s]130it [01:36,  1.35it/s]131it [01:37,  1.35it/s]132it [01:38,  1.35it/s]133it [01:39,  1.35it/s]134it [01:39,  1.35it/s]135it [01:40,  1.35it/s]136it [01:41,  1.35it/s]137it [01:42,  1.35it/s]138it [01:42,  1.35it/s]139it [01:43,  1.35it/s]140it [01:44,  1.35it/s]141it [01:45,  1.35it/s]142it [01:45,  1.35it/s]143it [01:46,  1.35it/s]144it [01:47,  1.35it/s]145it [01:48,  1.35it/s]146it [01:48,  1.35it/s]147it [01:49,  1.35it/s]148it [01:50,  1.35it/s]149it [01:51,  1.35it/s]150it [01:51,  1.35it/s]151it [01:52,  1.35it/s]152it [01:53,  1.35it/s]153it [01:54,  1.35it/s]154it [01:54,  1.35it/s]155it [01:55,  1.35it/s]156it [01:56,  1.35it/s]157it [01:57,  1.35it/s]158it [01:57,  1.35it/s]159it [01:58,  1.35it/s]160it [01:59,  1.35it/s]161it [01:59,  1.35it/s]162it [02:00,  1.35it/s]163it [02:01,  1.35it/s]164it [02:02,  1.35it/s]165it [02:02,  1.35it/s]166it [02:03,  1.35it/s]167it [02:04,  1.35it/s]168it [02:05,  1.35it/s]169it [02:05,  1.35it/s]170it [02:06,  1.35it/s]171it [02:07,  1.35it/s]172it [02:08,  1.34it/s]173it [02:08,  1.35it/s]174it [02:09,  1.35it/s]175it [02:10,  1.35it/s]176it [02:11,  1.35it/s]177it [02:11,  1.35it/s]178it [02:12,  1.35it/s]179it [02:13,  1.35it/s]180it [02:14,  1.35it/s]181it [02:14,  1.35it/s]182it [02:15,  1.35it/s]183it [02:16,  1.35it/s]184it [02:17,  1.35it/s]185it [02:17,  1.35it/s]186it [02:18,  1.35it/s]187it [02:19,  1.35it/s]188it [02:20,  1.35it/s]189it [02:20,  1.35it/s]190it [02:21,  1.35it/s]191it [02:22,  1.35it/s]192it [02:23,  1.35it/s]193it [02:23,  1.35it/s]194it [02:24,  1.34it/s]195it [02:25,  1.34it/s]196it [02:25,  1.34it/s]197it [02:26,  1.34it/s]198it [02:27,  1.34it/s]199it [02:28,  1.34it/s]200it [02:28,  1.34it/s]201it [02:29,  1.34it/s]202it [02:30,  1.34it/s]203it [02:31,  1.34it/s]204it [02:31,  1.34it/s]205it [02:32,  1.34it/s]206it [02:33,  1.34it/s]207it [02:34,  1.34it/s]208it [02:34,  1.34it/s]209it [02:35,  1.34it/s]210it [02:36,  1.34it/s]211it [02:37,  1.35it/s]212it [02:37,  1.35it/s]213it [02:38,  1.34it/s]214it [02:39,  1.34it/s]215it [02:40,  1.34it/s]216it [02:40,  1.34it/s]217it [02:41,  1.34it/s]218it [02:42,  1.34it/s]219it [02:43,  1.34it/s]220it [02:43,  1.34it/s]221it [02:44,  1.35it/s]222it [02:45,  1.35it/s]223it [02:46,  1.35it/s]224it [02:46,  1.35it/s]225it [02:47,  1.35it/s]226it [02:48,  1.35it/s]227it [02:49,  1.35it/s]228it [02:49,  1.35it/s]229it [02:50,  1.35it/s]230it [02:51,  1.35it/s]231it [02:52,  1.35it/s]232it [02:52,  1.35it/s]233it [02:53,  1.35it/s]234it [02:54,  1.35it/s]235it [02:54,  1.35it/s]236it [02:55,  1.35it/s]237it [02:56,  1.35it/s]238it [02:57,  1.35it/s]239it [02:57,  1.35it/s]240it [02:58,  1.35it/s]241it [02:59,  1.34it/s]242it [03:00,  1.34it/s]243it [03:00,  1.34it/s]244it [03:01,  1.34it/s]245it [03:02,  1.34it/s]246it [03:03,  1.34it/s]247it [03:03,  1.34it/s]248it [03:04,  1.34it/s]249it [03:05,  1.34it/s]250it [03:06,  1.34it/s]250it [03:06,  1.34it/s]
+ ===> Epoch 5
+ - Average training metrics: accuracy={'accuracy': 0.731375}
+ - Average validation metrics: accuracy={'accuracy': 0.7250764525993884}
+Epoch 6 training:
+0it [00:00, ?it/s]1it [00:01,  1.06s/it]2it [00:01,  1.15it/s]3it [00:02,  1.23it/s]4it [00:03,  1.27it/s]5it [00:04,  1.30it/s]6it [00:04,  1.31it/s]7it [00:05,  1.32it/s]8it [00:06,  1.33it/s]9it [00:06,  1.34it/s]10it [00:07,  1.34it/s]11it [00:08,  1.34it/s]12it [00:09,  1.34it/s]13it [00:09,  1.34it/s]14it [00:10,  1.34it/s]15it [00:11,  1.34it/s]16it [00:12,  1.34it/s]17it [00:12,  1.34it/s]18it [00:13,  1.34it/s]19it [00:14,  1.34it/s]20it [00:15,  1.34it/s]21it [00:15,  1.34it/s]22it [00:16,  1.34it/s]23it [00:17,  1.34it/s]24it [00:18,  1.34it/s]25it [00:18,  1.34it/s]26it [00:19,  1.34it/s]27it [00:20,  1.34it/s]28it [00:21,  1.34it/s]29it [00:21,  1.34it/s]30it [00:22,  1.34it/s]31it [00:23,  1.34it/s]32it [00:24,  1.34it/s]33it [00:24,  1.34it/s]34it [00:25,  1.34it/s]35it [00:26,  1.34it/s]36it [00:27,  1.34it/s]37it [00:27,  1.34it/s]38it [00:28,  1.34it/s]39it [00:29,  1.34it/s]40it [00:30,  1.34it/s]41it [00:30,  1.34it/s]42it [00:31,  1.34it/s]43it [00:32,  1.34it/s]44it [00:33,  1.34it/s]45it [00:33,  1.34it/s]46it [00:34,  1.34it/s]47it [00:35,  1.34it/s]48it [00:36,  1.34it/s]49it [00:36,  1.34it/s]50it [00:37,  1.34it/s]51it [00:38,  1.34it/s]52it [00:38,  1.34it/s]53it [00:39,  1.34it/s]54it [00:40,  1.34it/s]55it [00:41,  1.34it/s]56it [00:41,  1.34it/s]57it [00:42,  1.34it/s]58it [00:43,  1.34it/s]59it [00:44,  1.34it/s]60it [00:44,  1.34it/s]61it [00:45,  1.34it/s]62it [00:46,  1.34it/s]63it [00:47,  1.34it/s]64it [00:47,  1.34it/s]65it [00:48,  1.34it/s]66it [00:49,  1.34it/s]67it [00:50,  1.34it/s]68it [00:50,  1.34it/s]69it [00:51,  1.34it/s]70it [00:52,  1.34it/s]71it [00:53,  1.34it/s]72it [00:53,  1.34it/s]73it [00:54,  1.34it/s]74it [00:55,  1.34it/s]75it [00:56,  1.34it/s]76it [00:56,  1.34it/s]77it [00:57,  1.34it/s]78it [00:58,  1.34it/s]79it [00:59,  1.34it/s]80it [00:59,  1.34it/s]81it [01:00,  1.34it/s]82it [01:01,  1.34it/s]83it [01:02,  1.34it/s]84it [01:02,  1.34it/s]85it [01:03,  1.34it/s]86it [01:04,  1.34it/s]87it [01:05,  1.34it/s]88it [01:05,  1.34it/s]89it [01:06,  1.34it/s]90it [01:07,  1.34it/s]91it [01:08,  1.34it/s]92it [01:08,  1.34it/s]93it [01:09,  1.34it/s]94it [01:10,  1.34it/s]95it [01:11,  1.34it/s]96it [01:11,  1.34it/s]97it [01:12,  1.34it/s]98it [01:13,  1.34it/s]99it [01:13,  1.34it/s]100it [01:14,  1.34it/s]101it [01:15,  1.34it/s]102it [01:16,  1.34it/s]103it [01:16,  1.34it/s]104it [01:17,  1.34it/s]105it [01:18,  1.34it/s]106it [01:19,  1.34it/s]107it [01:19,  1.34it/s]108it [01:20,  1.34it/s]109it [01:21,  1.34it/s]110it [01:22,  1.34it/s]111it [01:22,  1.34it/s]112it [01:23,  1.34it/s]113it [01:24,  1.34it/s]114it [01:25,  1.34it/s]115it [01:25,  1.34it/s]116it [01:26,  1.34it/s]117it [01:27,  1.34it/s]118it [01:28,  1.34it/s]119it [01:28,  1.34it/s]120it [01:29,  1.34it/s]121it [01:30,  1.34it/s]122it [01:31,  1.34it/s]123it [01:31,  1.34it/s]124it [01:32,  1.34it/s]125it [01:33,  1.34it/s]126it [01:34,  1.34it/s]127it [01:34,  1.34it/s]128it [01:35,  1.34it/s]129it [01:36,  1.34it/s]130it [01:37,  1.34it/s]131it [01:37,  1.34it/s]132it [01:38,  1.34it/s]133it [01:39,  1.34it/s]134it [01:40,  1.34it/s]135it [01:40,  1.34it/s]136it [01:41,  1.34it/s]137it [01:42,  1.34it/s]138it [01:43,  1.34it/s]139it [01:43,  1.34it/s]140it [01:44,  1.34it/s]141it [01:45,  1.34it/s]142it [01:45,  1.34it/s]143it [01:46,  1.34it/s]144it [01:47,  1.34it/s]145it [01:48,  1.34it/s]146it [01:48,  1.34it/s]147it [01:49,  1.34it/s]148it [01:50,  1.34it/s]149it [01:51,  1.34it/s]150it [01:51,  1.34it/s]151it [01:52,  1.34it/s]152it [01:53,  1.34it/s]153it [01:54,  1.34it/s]154it [01:54,  1.34it/s]155it [01:55,  1.34it/s]156it [01:56,  1.34it/s]157it [01:57,  1.34it/s]158it [01:57,  1.34it/s]159it [01:58,  1.34it/s]160it [01:59,  1.34it/s]161it [02:00,  1.34it/s]162it [02:00,  1.34it/s]163it [02:01,  1.34it/s]164it [02:02,  1.35it/s]165it [02:03,  1.35it/s]166it [02:03,  1.34it/s]167it [02:04,  1.35it/s]168it [02:05,  1.35it/s]169it [02:06,  1.35it/s]170it [02:06,  1.35it/s]171it [02:07,  1.34it/s]172it [02:08,  1.34it/s]173it [02:09,  1.34it/s]174it [02:09,  1.34it/s]175it [02:10,  1.34it/s]176it [02:11,  1.34it/s]177it [02:12,  1.34it/s]178it [02:12,  1.35it/s]179it [02:13,  1.34it/s]180it [02:14,  1.34it/s]181it [02:15,  1.34it/s]182it [02:15,  1.34it/s]183it [02:16,  1.35it/s]184it [02:17,  1.35it/s]185it [02:17,  1.35it/s]186it [02:18,  1.35it/s]187it [02:19,  1.35it/s]188it [02:20,  1.35it/s]189it [02:20,  1.34it/s]190it [02:21,  1.35it/s]191it [02:22,  1.34it/s]192it [02:23,  1.34it/s]193it [02:23,  1.34it/s]194it [02:24,  1.34it/s]195it [02:25,  1.34it/s]196it [02:26,  1.34it/s]197it [02:26,  1.34it/s]198it [02:27,  1.34it/s]199it [02:28,  1.34it/s]200it [02:29,  1.35it/s]201it [02:29,  1.35it/s]202it [02:30,  1.35it/s]203it [02:31,  1.35it/s]204it [02:32,  1.35it/s]205it [02:32,  1.35it/s]206it [02:33,  1.35it/s]207it [02:34,  1.35it/s]208it [02:35,  1.35it/s]209it [02:35,  1.34it/s]210it [02:36,  1.35it/s]211it [02:37,  1.35it/s]212it [02:38,  1.35it/s]213it [02:38,  1.35it/s]214it [02:39,  1.34it/s]215it [02:40,  1.34it/s]216it [02:41,  1.34it/s]217it [02:41,  1.34it/s]218it [02:42,  1.34it/s]219it [02:43,  1.34it/s]220it [02:44,  1.34it/s]221it [02:44,  1.34it/s]222it [02:45,  1.34it/s]223it [02:46,  1.35it/s]224it [02:46,  1.35it/s]225it [02:47,  1.35it/s]226it [02:48,  1.34it/s]227it [02:49,  1.35it/s]228it [02:49,  1.35it/s]229it [02:50,  1.35it/s]230it [02:51,  1.35it/s]231it [02:52,  1.35it/s]232it [02:52,  1.35it/s]233it [02:53,  1.35it/s]234it [02:54,  1.35it/s]235it [02:55,  1.35it/s]236it [02:55,  1.35it/s]237it [02:56,  1.35it/s]238it [02:57,  1.35it/s]239it [02:58,  1.35it/s]240it [02:58,  1.35it/s]241it [02:59,  1.35it/s]242it [03:00,  1.35it/s]243it [03:01,  1.35it/s]244it [03:01,  1.35it/s]245it [03:02,  1.35it/s]246it [03:03,  1.34it/s]247it [03:04,  1.34it/s]248it [03:04,  1.34it/s]249it [03:05,  1.34it/s]250it [03:06,  1.35it/s]250it [03:06,  1.34it/s]
+ ===> Epoch 6
+ - Average training metrics: accuracy={'accuracy': 0.7445}
+ - Average validation metrics: accuracy={'accuracy': 0.7293577981651376}
+Epoch 7 training:
+0it [00:00, ?it/s]1it [00:01,  1.05s/it]2it [00:01,  1.15it/s]3it [00:02,  1.23it/s]4it [00:03,  1.28it/s]5it [00:04,  1.30it/s]6it [00:04,  1.32it/s]7it [00:05,  1.33it/s]8it [00:06,  1.34it/s]9it [00:06,  1.34it/s]10it [00:07,  1.34it/s]11it [00:08,  1.35it/s]12it [00:09,  1.35it/s]13it [00:09,  1.35it/s]14it [00:10,  1.35it/s]15it [00:11,  1.35it/s]16it [00:12,  1.35it/s]17it [00:12,  1.35it/s]18it [00:13,  1.35it/s]19it [00:14,  1.35it/s]20it [00:15,  1.35it/s]21it [00:15,  1.35it/s]22it [00:16,  1.35it/s]23it [00:17,  1.35it/s]24it [00:18,  1.35it/s]25it [00:18,  1.35it/s]26it [00:19,  1.35it/s]27it [00:20,  1.35it/s]28it [00:21,  1.35it/s]29it [00:21,  1.35it/s]30it [00:22,  1.35it/s]31it [00:23,  1.35it/s]32it [00:24,  1.35it/s]33it [00:24,  1.35it/s]34it [00:25,  1.35it/s]35it [00:26,  1.35it/s]36it [00:26,  1.35it/s]37it [00:27,  1.35it/s]38it [00:28,  1.35it/s]39it [00:29,  1.35it/s]40it [00:29,  1.35it/s]41it [00:30,  1.35it/s]42it [00:31,  1.35it/s]43it [00:32,  1.35it/s]44it [00:32,  1.35it/s]45it [00:33,  1.35it/s]46it [00:34,  1.35it/s]47it [00:35,  1.35it/s]48it [00:35,  1.35it/s]49it [00:36,  1.35it/s]50it [00:37,  1.35it/s]51it [00:38,  1.35it/s]52it [00:38,  1.35it/s]53it [00:39,  1.35it/s]54it [00:40,  1.35it/s]55it [00:41,  1.35it/s]56it [00:41,  1.35it/s]57it [00:42,  1.35it/s]58it [00:43,  1.35it/s]59it [00:44,  1.35it/s]60it [00:44,  1.35it/s]61it [00:45,  1.35it/s]62it [00:46,  1.35it/s]63it [00:47,  1.35it/s]64it [00:47,  1.35it/s]65it [00:48,  1.35it/s]66it [00:49,  1.35it/s]67it [00:49,  1.35it/s]68it [00:50,  1.35it/s]69it [00:51,  1.35it/s]70it [00:52,  1.35it/s]71it [00:52,  1.35it/s]72it [00:53,  1.35it/s]73it [00:54,  1.35it/s]74it [00:55,  1.35it/s]75it [00:55,  1.35it/s]76it [00:56,  1.35it/s]77it [00:57,  1.35it/s]78it [00:58,  1.35it/s]79it [00:58,  1.35it/s]80it [00:59,  1.35it/s]81it [01:00,  1.35it/s]82it [01:01,  1.35it/s]83it [01:01,  1.35it/s]84it [01:02,  1.35it/s]85it [01:03,  1.35it/s]86it [01:04,  1.35it/s]87it [01:04,  1.35it/s]88it [01:05,  1.35it/s]89it [01:06,  1.35it/s]90it [01:07,  1.35it/s]91it [01:07,  1.35it/s]92it [01:08,  1.35it/s]93it [01:09,  1.35it/s]94it [01:09,  1.35it/s]95it [01:10,  1.35it/s]96it [01:11,  1.35it/s]97it [01:12,  1.35it/s]98it [01:12,  1.35it/s]99it [01:13,  1.35it/s]100it [01:14,  1.35it/s]101it [01:15,  1.35it/s]102it [01:15,  1.35it/s]103it [01:16,  1.35it/s]104it [01:17,  1.35it/s]105it [01:18,  1.35it/s]106it [01:18,  1.35it/s]107it [01:19,  1.35it/s]108it [01:20,  1.35it/s]109it [01:21,  1.35it/s]110it [01:21,  1.35it/s]111it [01:22,  1.35it/s]112it [01:23,  1.35it/s]113it [01:24,  1.35it/s]114it [01:24,  1.35it/s]115it [01:25,  1.34it/s]116it [01:26,  1.35it/s]117it [01:27,  1.35it/s]118it [01:27,  1.35it/s]119it [01:28,  1.35it/s]120it [01:29,  1.35it/s]121it [01:30,  1.35it/s]122it [01:30,  1.35it/s]123it [01:31,  1.35it/s]124it [01:32,  1.35it/s]125it [01:33,  1.35it/s]126it [01:33,  1.35it/s]127it [01:34,  1.35it/s]128it [01:35,  1.35it/s]129it [01:35,  1.35it/s]130it [01:36,  1.35it/s]131it [01:37,  1.35it/s]132it [01:38,  1.35it/s]133it [01:38,  1.35it/s]134it [01:39,  1.35it/s]135it [01:40,  1.35it/s]136it [01:41,  1.35it/s]137it [01:41,  1.35it/s]138it [01:42,  1.35it/s]139it [01:43,  1.35it/s]140it [01:44,  1.35it/s]141it [01:44,  1.35it/s]142it [01:45,  1.35it/s]143it [01:46,  1.34it/s]144it [01:47,  1.35it/s]145it [01:47,  1.34it/s]146it [01:48,  1.34it/s]147it [01:49,  1.34it/s]148it [01:50,  1.34it/s]149it [01:50,  1.35it/s]150it [01:51,  1.35it/s]151it [01:52,  1.35it/s]152it [01:53,  1.34it/s]153it [01:53,  1.34it/s]154it [01:54,  1.35it/s]155it [01:55,  1.34it/s]156it [01:56,  1.35it/s]157it [01:56,  1.35it/s]158it [01:57,  1.35it/s]159it [01:58,  1.35it/s]160it [01:59,  1.35it/s]161it [01:59,  1.35it/s]162it [02:00,  1.35it/s]163it [02:01,  1.35it/s]164it [02:01,  1.35it/s]165it [02:02,  1.35it/s]166it [02:03,  1.35it/s]167it [02:04,  1.35it/s]168it [02:04,  1.35it/s]169it [02:05,  1.35it/s]170it [02:06,  1.35it/s]171it [02:07,  1.35it/s]172it [02:07,  1.35it/s]173it [02:08,  1.35it/s]174it [02:09,  1.35it/s]175it [02:10,  1.35it/s]176it [02:10,  1.35it/s]177it [02:11,  1.35it/s]178it [02:12,  1.35it/s]179it [02:13,  1.35it/s]180it [02:13,  1.35it/s]181it [02:14,  1.35it/s]182it [02:15,  1.35it/s]183it [02:16,  1.35it/s]184it [02:16,  1.35it/s]185it [02:17,  1.35it/s]186it [02:18,  1.35it/s]187it [02:19,  1.35it/s]188it [02:19,  1.35it/s]189it [02:20,  1.35it/s]190it [02:21,  1.35it/s]191it [02:22,  1.35it/s]192it [02:22,  1.35it/s]193it [02:23,  1.35it/s]194it [02:24,  1.35it/s]195it [02:24,  1.35it/s]196it [02:25,  1.35it/s]197it [02:26,  1.35it/s]198it [02:27,  1.35it/s]199it [02:27,  1.35it/s]200it [02:28,  1.35it/s]201it [02:29,  1.35it/s]202it [02:30,  1.35it/s]203it [02:30,  1.35it/s]204it [02:31,  1.35it/s]205it [02:32,  1.35it/s]206it [02:33,  1.35it/s]207it [02:33,  1.35it/s]208it [02:34,  1.35it/s]209it [02:35,  1.35it/s]210it [02:36,  1.35it/s]211it [02:36,  1.35it/s]212it [02:37,  1.35it/s]213it [02:38,  1.35it/s]214it [02:39,  1.35it/s]215it [02:39,  1.35it/s]216it [02:40,  1.35it/s]217it [02:41,  1.35it/s]218it [02:42,  1.35it/s]219it [02:42,  1.35it/s]220it [02:43,  1.35it/s]221it [02:44,  1.35it/s]222it [02:45,  1.35it/s]223it [02:45,  1.35it/s]224it [02:46,  1.35it/s]225it [02:47,  1.35it/s]226it [02:47,  1.35it/s]227it [02:48,  1.35it/s]228it [02:49,  1.35it/s]229it [02:50,  1.35it/s]230it [02:50,  1.35it/s]231it [02:51,  1.35it/s]232it [02:52,  1.35it/s]233it [02:53,  1.35it/s]234it [02:53,  1.35it/s]235it [02:54,  1.35it/s]236it [02:55,  1.35it/s]237it [02:56,  1.35it/s]238it [02:56,  1.35it/s]239it [02:57,  1.35it/s]240it [02:58,  1.35it/s]241it [02:59,  1.35it/s]242it [02:59,  1.35it/s]243it [03:00,  1.35it/s]244it [03:01,  1.35it/s]245it [03:02,  1.35it/s]246it [03:02,  1.35it/s]247it [03:03,  1.35it/s]248it [03:04,  1.35it/s]249it [03:05,  1.35it/s]250it [03:05,  1.35it/s]250it [03:05,  1.35it/s]
+ ===> Epoch 7
+ - Average training metrics: accuracy={'accuracy': 0.75175}
+ - Average validation metrics: accuracy={'accuracy': 0.7345565749235474}
+Epoch 8 training:
+0it [00:00, ?it/s]1it [00:01,  1.05s/it]2it [00:01,  1.15it/s]3it [00:02,  1.24it/s]4it [00:03,  1.28it/s]5it [00:04,  1.30it/s]6it [00:04,  1.32it/s]7it [00:05,  1.33it/s]8it [00:06,  1.34it/s]9it [00:06,  1.34it/s]10it [00:07,  1.34it/s]11it [00:08,  1.35it/s]12it [00:09,  1.35it/s]13it [00:09,  1.35it/s]14it [00:10,  1.35it/s]15it [00:11,  1.35it/s]16it [00:12,  1.35it/s]17it [00:12,  1.35it/s]18it [00:13,  1.35it/s]19it [00:14,  1.35it/s]20it [00:15,  1.35it/s]21it [00:15,  1.35it/s]22it [00:16,  1.35it/s]23it [00:17,  1.35it/s]24it [00:18,  1.35it/s]25it [00:18,  1.35it/s]26it [00:19,  1.35it/s]27it [00:20,  1.35it/s]28it [00:21,  1.35it/s]29it [00:21,  1.35it/s]30it [00:22,  1.35it/s]31it [00:23,  1.35it/s]32it [00:24,  1.35it/s]33it [00:24,  1.35it/s]34it [00:25,  1.35it/s]35it [00:26,  1.35it/s]36it [00:26,  1.35it/s]37it [00:27,  1.35it/s]38it [00:28,  1.35it/s]39it [00:29,  1.35it/s]40it [00:29,  1.35it/s]41it [00:30,  1.35it/s]42it [00:31,  1.35it/s]43it [00:32,  1.35it/s]44it [00:32,  1.35it/s]45it [00:33,  1.35it/s]46it [00:34,  1.35it/s]47it [00:35,  1.35it/s]48it [00:35,  1.35it/s]49it [00:36,  1.35it/s]50it [00:37,  1.35it/s]51it [00:38,  1.35it/s]52it [00:38,  1.35it/s]53it [00:39,  1.35it/s]54it [00:40,  1.35it/s]55it [00:41,  1.35it/s]56it [00:41,  1.35it/s]57it [00:42,  1.35it/s]58it [00:43,  1.35it/s]59it [00:44,  1.35it/s]60it [00:44,  1.35it/s]61it [00:45,  1.35it/s]62it [00:46,  1.35it/s]63it [00:47,  1.35it/s]64it [00:47,  1.35it/s]65it [00:48,  1.35it/s]66it [00:49,  1.35it/s]67it [00:49,  1.35it/s]68it [00:50,  1.35it/s]69it [00:51,  1.35it/s]70it [00:52,  1.35it/s]71it [00:52,  1.35it/s]72it [00:53,  1.35it/s]73it [00:54,  1.35it/s]74it [00:55,  1.35it/s]75it [00:55,  1.35it/s]76it [00:56,  1.35it/s]77it [00:57,  1.35it/s]78it [00:58,  1.35it/s]79it [00:58,  1.35it/s]80it [00:59,  1.35it/s]81it [01:00,  1.35it/s]82it [01:01,  1.35it/s]83it [01:01,  1.35it/s]84it [01:02,  1.35it/s]85it [01:03,  1.35it/s]86it [01:04,  1.35it/s]87it [01:04,  1.35it/s]88it [01:05,  1.35it/s]89it [01:06,  1.35it/s]90it [01:07,  1.35it/s]91it [01:07,  1.35it/s]92it [01:08,  1.35it/s]93it [01:09,  1.35it/s]94it [01:10,  1.35it/s]95it [01:10,  1.35it/s]96it [01:11,  1.35it/s]97it [01:12,  1.35it/s]98it [01:12,  1.35it/s]99it [01:13,  1.35it/s]100it [01:14,  1.35it/s]101it [01:15,  1.35it/s]102it [01:15,  1.35it/s]103it [01:16,  1.35it/s]104it [01:17,  1.35it/s]105it [01:18,  1.35it/s]106it [01:18,  1.35it/s]107it [01:19,  1.34it/s]108it [01:20,  1.34it/s]109it [01:21,  1.35it/s]110it [01:21,  1.35it/s]111it [01:22,  1.35it/s]112it [01:23,  1.34it/s]113it [01:24,  1.35it/s]114it [01:24,  1.34it/s]115it [01:25,  1.34it/s]116it [01:26,  1.34it/s]117it [01:27,  1.34it/s]118it [01:27,  1.34it/s]119it [01:28,  1.34it/s]120it [01:29,  1.34it/s]121it [01:30,  1.34it/s]122it [01:30,  1.34it/s]123it [01:31,  1.34it/s]124it [01:32,  1.34it/s]125it [01:33,  1.34it/s]126it [01:33,  1.34it/s]127it [01:34,  1.34it/s]128it [01:35,  1.34it/s]129it [01:36,  1.34it/s]130it [01:36,  1.34it/s]131it [01:37,  1.34it/s]132it [01:38,  1.34it/s]133it [01:38,  1.34it/s]134it [01:39,  1.34it/s]135it [01:40,  1.34it/s]136it [01:41,  1.34it/s]137it [01:41,  1.34it/s]138it [01:42,  1.35it/s]139it [01:43,  1.34it/s]140it [01:44,  1.35it/s]141it [01:44,  1.34it/s]142it [01:45,  1.35it/s]143it [01:46,  1.34it/s]144it [01:47,  1.34it/s]145it [01:47,  1.34it/s]146it [01:48,  1.34it/s]147it [01:49,  1.34it/s]148it [01:50,  1.34it/s]149it [01:50,  1.34it/s]150it [01:51,  1.34it/s]151it [01:52,  1.34it/s]152it [01:53,  1.34it/s]153it [01:53,  1.34it/s]154it [01:54,  1.34it/s]155it [01:55,  1.34it/s]156it [01:56,  1.34it/s]157it [01:56,  1.34it/s]158it [01:57,  1.34it/s]159it [01:58,  1.34it/s]160it [01:59,  1.34it/s]161it [01:59,  1.34it/s]162it [02:00,  1.34it/s]163it [02:01,  1.34it/s]164it [02:02,  1.35it/s]165it [02:02,  1.34it/s]166it [02:03,  1.34it/s]167it [02:04,  1.34it/s]168it [02:05,  1.34it/s]169it [02:05,  1.35it/s]170it [02:06,  1.34it/s]171it [02:07,  1.34it/s]172it [02:08,  1.34it/s]173it [02:08,  1.34it/s]174it [02:09,  1.34it/s]175it [02:10,  1.34it/s]176it [02:10,  1.34it/s]177it [02:11,  1.34it/s]178it [02:12,  1.34it/s]179it [02:13,  1.34it/s]180it [02:13,  1.34it/s]181it [02:14,  1.34it/s]182it [02:15,  1.34it/s]183it [02:16,  1.34it/s]184it [02:16,  1.34it/s]185it [02:17,  1.34it/s]186it [02:18,  1.34it/s]187it [02:19,  1.34it/s]188it [02:19,  1.34it/s]189it [02:20,  1.34it/s]190it [02:21,  1.34it/s]191it [02:22,  1.34it/s]192it [02:22,  1.34it/s]193it [02:23,  1.34it/s]194it [02:24,  1.34it/s]195it [02:25,  1.34it/s]196it [02:25,  1.34it/s]197it [02:26,  1.34it/s]198it [02:27,  1.34it/s]199it [02:28,  1.34it/s]200it [02:28,  1.34it/s]201it [02:29,  1.34it/s]202it [02:30,  1.34it/s]203it [02:31,  1.34it/s]204it [02:31,  1.34it/s]205it [02:32,  1.35it/s]206it [02:33,  1.34it/s]207it [02:34,  1.35it/s]208it [02:34,  1.35it/s]209it [02:35,  1.34it/s]210it [02:36,  1.35it/s]211it [02:37,  1.35it/s]212it [02:37,  1.35it/s]213it [02:38,  1.34it/s]214it [02:39,  1.34it/s]215it [02:39,  1.34it/s]216it [02:40,  1.34it/s]217it [02:41,  1.34it/s]218it [02:42,  1.34it/s]219it [02:42,  1.34it/s]220it [02:43,  1.34it/s]221it [02:44,  1.34it/s]222it [02:45,  1.34it/s]223it [02:45,  1.34it/s]224it [02:46,  1.34it/s]225it [02:47,  1.34it/s]226it [02:48,  1.34it/s]227it [02:48,  1.34it/s]228it [02:49,  1.34it/s]229it [02:50,  1.34it/s]230it [02:51,  1.34it/s]231it [02:51,  1.34it/s]232it [02:52,  1.34it/s]233it [02:53,  1.35it/s]234it [02:54,  1.35it/s]235it [02:54,  1.35it/s]236it [02:55,  1.35it/s]237it [02:56,  1.35it/s]238it [02:57,  1.35it/s]239it [02:57,  1.35it/s]240it [02:58,  1.34it/s]241it [02:59,  1.34it/s]242it [03:00,  1.34it/s]243it [03:00,  1.34it/s]244it [03:01,  1.34it/s]245it [03:02,  1.34it/s]246it [03:03,  1.34it/s]247it [03:03,  1.34it/s]248it [03:04,  1.34it/s]249it [03:05,  1.34it/s]250it [03:06,  1.34it/s]250it [03:06,  1.34it/s]
+ ===> Epoch 8
+ - Average training metrics: accuracy={'accuracy': 0.75325}
+ - Average validation metrics: accuracy={'accuracy': 0.7345565749235474}
+Epoch 9 training:
+0it [00:00, ?it/s]1it [00:01,  1.05s/it]2it [00:01,  1.15it/s]3it [00:02,  1.23it/s]4it [00:03,  1.27it/s]5it [00:04,  1.30it/s]6it [00:04,  1.32it/s]7it [00:05,  1.32it/s]8it [00:06,  1.33it/s]9it [00:06,  1.34it/s]10it [00:07,  1.34it/s]11it [00:08,  1.34it/s]12it [00:09,  1.34it/s]13it [00:09,  1.34it/s]14it [00:10,  1.34it/s]15it [00:11,  1.34it/s]16it [00:12,  1.34it/s]17it [00:12,  1.34it/s]18it [00:13,  1.34it/s]19it [00:14,  1.34it/s]20it [00:15,  1.34it/s]21it [00:15,  1.34it/s]22it [00:16,  1.34it/s]23it [00:17,  1.34it/s]24it [00:18,  1.34it/s]25it [00:18,  1.34it/s]26it [00:19,  1.34it/s]27it [00:20,  1.34it/s]28it [00:21,  1.35it/s]29it [00:21,  1.35it/s]30it [00:22,  1.34it/s]31it [00:23,  1.34it/s]32it [00:24,  1.34it/s]33it [00:24,  1.34it/s]34it [00:25,  1.34it/s]35it [00:26,  1.34it/s]36it [00:27,  1.34it/s]37it [00:27,  1.34it/s]38it [00:28,  1.34it/s]39it [00:29,  1.34it/s]40it [00:30,  1.34it/s]41it [00:30,  1.34it/s]42it [00:31,  1.34it/s]43it [00:32,  1.34it/s]44it [00:33,  1.34it/s]45it [00:33,  1.34it/s]46it [00:34,  1.34it/s]47it [00:35,  1.34it/s]48it [00:36,  1.34it/s]49it [00:36,  1.35it/s]50it [00:37,  1.35it/s]51it [00:38,  1.34it/s]52it [00:38,  1.34it/s]53it [00:39,  1.34it/s]54it [00:40,  1.34it/s]55it [00:41,  1.34it/s]56it [00:41,  1.34it/s]57it [00:42,  1.34it/s]58it [00:43,  1.34it/s]59it [00:44,  1.34it/s]60it [00:44,  1.34it/s]61it [00:45,  1.34it/s]62it [00:46,  1.34it/s]63it [00:47,  1.34it/s]64it [00:47,  1.34it/s]65it [00:48,  1.34it/s]66it [00:49,  1.34it/s]67it [00:50,  1.34it/s]68it [00:50,  1.34it/s]69it [00:51,  1.34it/s]70it [00:52,  1.34it/s]71it [00:53,  1.34it/s]72it [00:53,  1.34it/s]73it [00:54,  1.34it/s]74it [00:55,  1.34it/s]75it [00:56,  1.34it/s]76it [00:56,  1.34it/s]77it [00:57,  1.34it/s]78it [00:58,  1.34it/s]79it [00:59,  1.34it/s]80it [00:59,  1.34it/s]81it [01:00,  1.34it/s]82it [01:01,  1.34it/s]83it [01:02,  1.34it/s]84it [01:02,  1.34it/s]85it [01:03,  1.34it/s]86it [01:04,  1.34it/s]87it [01:05,  1.34it/s]88it [01:05,  1.34it/s]89it [01:06,  1.34it/s]90it [01:07,  1.34it/s]91it [01:08,  1.34it/s]92it [01:08,  1.34it/s]93it [01:09,  1.34it/s]94it [01:10,  1.34it/s]95it [01:10,  1.34it/s]96it [01:11,  1.34it/s]97it [01:12,  1.34it/s]98it [01:13,  1.34it/s]99it [01:13,  1.34it/s]100it [01:14,  1.34it/s]101it [01:15,  1.34it/s]102it [01:16,  1.34it/s]103it [01:16,  1.34it/s]104it [01:17,  1.34it/s]105it [01:18,  1.34it/s]106it [01:19,  1.34it/s]107it [01:19,  1.34it/s]108it [01:20,  1.34it/s]109it [01:21,  1.34it/s]110it [01:22,  1.34it/s]111it [01:22,  1.34it/s]112it [01:23,  1.34it/s]113it [01:24,  1.34it/s]114it [01:25,  1.34it/s]115it [01:25,  1.34it/s]116it [01:26,  1.34it/s]117it [01:27,  1.34it/s]118it [01:28,  1.34it/s]119it [01:28,  1.34it/s]120it [01:29,  1.34it/s]121it [01:30,  1.35it/s]122it [01:31,  1.35it/s]123it [01:31,  1.35it/s]124it [01:32,  1.35it/s]125it [01:33,  1.35it/s]126it [01:34,  1.35it/s]127it [01:34,  1.35it/s]128it [01:35,  1.35it/s]129it [01:36,  1.34it/s]130it [01:37,  1.34it/s]131it [01:37,  1.34it/s]132it [01:38,  1.34it/s]133it [01:39,  1.34it/s]134it [01:40,  1.34it/s]135it [01:40,  1.34it/s]136it [01:41,  1.35it/s]137it [01:42,  1.35it/s]138it [01:42,  1.34it/s]139it [01:43,  1.34it/s]140it [01:44,  1.34it/s]141it [01:45,  1.34it/s]142it [01:45,  1.34it/s]143it [01:46,  1.34it/s]144it [01:47,  1.34it/s]145it [01:48,  1.34it/s]146it [01:48,  1.34it/s]147it [01:49,  1.34it/s]148it [01:50,  1.34it/s]149it [01:51,  1.34it/s]150it [01:51,  1.34it/s]151it [01:52,  1.34it/s]152it [01:53,  1.34it/s]153it [01:54,  1.34it/s]154it [01:54,  1.34it/s]155it [01:55,  1.34it/s]156it [01:56,  1.34it/s]157it [01:57,  1.35it/s]158it [01:57,  1.34it/s]159it [01:58,  1.34it/s]160it [01:59,  1.34it/s]161it [02:00,  1.34it/s]162it [02:00,  1.34it/s]163it [02:01,  1.35it/s]164it [02:02,  1.35it/s]165it [02:03,  1.35it/s]166it [02:03,  1.35it/s]167it [02:04,  1.35it/s]168it [02:05,  1.35it/s]169it [02:06,  1.35it/s]170it [02:06,  1.35it/s]171it [02:07,  1.34it/s]172it [02:08,  1.34it/s]173it [02:09,  1.34it/s]174it [02:09,  1.35it/s]175it [02:10,  1.35it/s]176it [02:11,  1.34it/s]177it [02:12,  1.34it/s]178it [02:12,  1.35it/s]179it [02:13,  1.34it/s]180it [02:14,  1.34it/s]181it [02:14,  1.34it/s]182it [02:15,  1.34it/s]183it [02:16,  1.35it/s]184it [02:17,  1.35it/s]185it [02:17,  1.35it/s]186it [02:18,  1.35it/s]187it [02:19,  1.34it/s]188it [02:20,  1.34it/s]189it [02:20,  1.34it/s]190it [02:21,  1.35it/s]191it [02:22,  1.34it/s]192it [02:23,  1.34it/s]193it [02:23,  1.34it/s]194it [02:24,  1.34it/s]195it [02:25,  1.34it/s]196it [02:26,  1.34it/s]197it [02:26,  1.34it/s]198it [02:27,  1.34it/s]199it [02:28,  1.34it/s]200it [02:29,  1.34it/s]201it [02:29,  1.34it/s]202it [02:30,  1.34it/s]203it [02:31,  1.34it/s]204it [02:32,  1.34it/s]205it [02:32,  1.34it/s]206it [02:33,  1.34it/s]207it [02:34,  1.34it/s]208it [02:35,  1.34it/s]209it [02:35,  1.34it/s]210it [02:36,  1.34it/s]211it [02:37,  1.34it/s]212it [02:38,  1.34it/s]213it [02:38,  1.34it/s]214it [02:39,  1.34it/s]215it [02:40,  1.34it/s]216it [02:41,  1.34it/s]217it [02:41,  1.34it/s]218it [02:42,  1.34it/s]219it [02:43,  1.34it/s]220it [02:43,  1.34it/s]221it [02:44,  1.34it/s]222it [02:45,  1.35it/s]223it [02:46,  1.35it/s]224it [02:46,  1.35it/s]225it [02:47,  1.35it/s]226it [02:48,  1.34it/s]227it [02:49,  1.35it/s]228it [02:49,  1.35it/s]229it [02:50,  1.35it/s]230it [02:51,  1.35it/s]231it [02:52,  1.35it/s]232it [02:52,  1.35it/s]233it [02:53,  1.35it/s]234it [02:54,  1.35it/s]235it [02:55,  1.35it/s]236it [02:55,  1.35it/s]237it [02:56,  1.35it/s]238it [02:57,  1.35it/s]239it [02:58,  1.35it/s]240it [02:58,  1.35it/s]241it [02:59,  1.34it/s]242it [03:00,  1.35it/s]243it [03:01,  1.35it/s]244it [03:01,  1.34it/s]245it [03:02,  1.34it/s]246it [03:03,  1.34it/s]247it [03:04,  1.34it/s]248it [03:04,  1.34it/s]249it [03:05,  1.34it/s]250it [03:06,  1.34it/s]250it [03:06,  1.34it/s]
+ ===> Epoch 9
+ - Average training metrics: accuracy={'accuracy': 0.758375}
+ - Average validation metrics: accuracy={'accuracy': 0.7379204892966361}
+torch.cuda.memory_allocated: 0.485833GB
+torch.cuda.memory_reserved: 4.031250GB
+torch.cuda.max_memory_reserved: 4.031250GB
+Wed Mar  6 17:06:44 2024       
++---------------------------------------------------------------------------------------+
+| NVIDIA-SMI 545.23.08              Driver Version: 545.23.08    CUDA Version: 12.3     |
+|-----------------------------------------+----------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |         Memory-Usage | GPU-Util  Compute M. |
+|                                         |                      |               MIG M. |
+|=========================================+======================+======================|
+|   0  NVIDIA A100-SXM4-80GB          On  | 00000000:01:00.0 Off |                   On |
+| N/A   52C    P0             270W / 500W |  30364MiB / 81920MiB |     N/A      Default |
+|                                         |                      |              Enabled |
++-----------------------------------------+----------------------+----------------------+
+|   1  NVIDIA A100-SXM4-80GB          On  | 00000000:41:00.0 Off |                   On |
+| N/A   26C    P0              54W / 500W |     87MiB / 81920MiB |     N/A      Default |
+|                                         |                      |              Enabled |
++-----------------------------------------+----------------------+----------------------+
+|   2  NVIDIA A100-SXM4-80GB          On  | 00000000:81:00.0 Off |                   On |
+| N/A   27C    P0              51W / 500W |     87MiB / 81920MiB |     N/A      Default |
+|                                         |                      |              Enabled |
++-----------------------------------------+----------------------+----------------------+
+|   3  NVIDIA A100-SXM4-80GB          On  | 00000000:C1:00.0 Off |                   On |
+| N/A   26C    P0              49W / 500W |     87MiB / 81920MiB |     N/A      Default |
+|                                         |                      |              Enabled |
++-----------------------------------------+----------------------+----------------------+
+
++---------------------------------------------------------------------------------------+
+| MIG devices:                                                                          |
++------------------+--------------------------------+-----------+-----------------------+
+| GPU  GI  CI  MIG |                   Memory-Usage |        Vol|      Shared           |
+|      ID  ID  Dev |                     BAR1-Usage | SM     Unc| CE ENC DEC OFA JPG    |
+|                  |                                |        ECC|                       |
+|==================+================================+===========+=======================|
+|  0    8   0   0  |            4252MiB /  9728MiB  | 14      0 |  1   0    0    0    0 |
+|                  |               2MiB / 16383MiB  |           |                       |
++------------------+--------------------------------+-----------+-----------------------+
+                                                                                         
++---------------------------------------------------------------------------------------+
+| Processes:                                                                            |
+|  GPU   GI   CI        PID   Type   Process name                            GPU Memory |
+|        ID   ID                                                             Usage      |
+|=======================================================================================|
+|    0    8    0    2244874      C   python                                     4232MiB |
++---------------------------------------------------------------------------------------+
+
+ - Average DEV metrics: accuracy={'accuracy': 0.7379204892966361}
+ - Average TEST metrics: accuracy={'accuracy': 0.744218640504555}
